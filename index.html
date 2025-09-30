@@ -2,55 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23EF4444'%3e%3cpath d='M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm0 4.5c2.48 0 4.5 1.97 4.5 4.41S14.48 15.32 12 15.32 7.5 13.35 7.5 10.91 9.52 6.5 12 6.5z' /%3e%3cpath d='M12 8.5c-1.85 0-3.35 1.54-3.35 3.41s1.5 3.41 3.35 3.41 3.35-1.54 3.35-3.41-1.5-3.41-3.35-3.41z' opacity='.3' /%3e%3c/svg%3e" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Scrum Book - Your Rugby League Companion</title>
+    <title>The Scrum Book · Rugby Match Tracker</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       :root {
         color-scheme: light;
+        --clr-bg-start: #fef6ee;
+        --clr-bg-mid: #f3f4ff;
+        --clr-bg-end: #ffffff;
         --clr-primary: #f97316;
-        --clr-secondary: #06b6d4;
-        --clr-accent: #facc15;
-        --clr-danger: #ef4444;
-        --clr-warning: #fb923c;
-        --clr-info: #38bdf8;
-        --clr-success: #22c55e;
-        --clr-text-strong: #0f172a;
-        --clr-text: #1f2937;
-        --clr-text-subtle: #64748b;
-        --clr-border: #e2e8f0;
-        --clr-surface: #ffffff;
-        --clr-surface-alt: #f8fafc;
-
-        --gradient-1: linear-gradient(140deg, rgba(249, 115, 22, 0.18), rgba(6, 182, 212, 0.15));
-        --gradient-2: radial-gradient(circle at 20% 15%, rgba(250, 204, 21, 0.18), transparent 55%);
-        --gradient-3: radial-gradient(circle at 80% 0%, rgba(129, 140, 248, 0.22), transparent 45%);
+        --clr-surface: rgba(255, 255, 255, 0.88);
+        --clr-surface-dark: rgba(15, 23, 42, 0.82);
       }
       html.dark {
         color-scheme: dark;
-        --clr-surface: #0f172a;
-        --clr-surface-alt: #111827;
-        --clr-text-strong: #f8fafc;
-        --clr-text: #e2e8f0;
-        --clr-text-subtle: #94a3b8;
-        --clr-border: #1e293b;
-        --gradient-1: linear-gradient(140deg, rgba(249, 115, 22, 0.22), rgba(14, 116, 144, 0.25));
-        --gradient-2: radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.35), transparent 60%);
-        --gradient-3: radial-gradient(circle at 90% 10%, rgba(8, 145, 178, 0.28), transparent 55%);
       }
       body {
-        background: var(--clr-surface-alt);
+        margin: 0;
+        font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+        background: linear-gradient(135deg, var(--clr-bg-start), var(--clr-bg-mid), var(--clr-bg-end));
+        min-height: 100vh;
       }
       .app-background {
-        background-color: var(--clr-surface-alt);
-        background-image: var(--gradient-1), var(--gradient-2), var(--gradient-3);
-        background-attachment: fixed;
-      }
-
-      html.dark .app-background {
-        background-color: #020617;
-        background-image: var(--gradient-1), var(--gradient-2), var(--gradient-3);
+        background-image: radial-gradient(circle at 0% 0%, rgba(249, 115, 22, 0.12), transparent 45%),
+          radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.1), transparent 55%),
+          linear-gradient(135deg, rgba(15, 23, 42, 0.05), rgba(15, 23, 42, 0));
       }
     </style>
     <script>
@@ -60,55 +38,27 @@
           extend: {
             colors: {
               primary: 'var(--clr-primary)',
-              secondary: 'var(--clr-secondary)',
-              accent: 'var(--clr-accent)',
-              danger: 'var(--clr-danger)',
-              warning: 'var(--clr-warning)',
-              info: 'var(--clr-info)',
-              success: 'var(--clr-success)',
-              surface: 'var(--clr-surface)',
-              'surface-alt': 'var(--clr-surface-alt)',
-              'text-strong': 'var(--clr-text-strong)',
-              'text': 'var(--clr-text)',
-              'text-subtle': 'var(--clr-text-subtle)',
-              border: 'var(--clr-border)',
             },
-            borderRadius: { 
-              'md': '12px', 
-              'xl': '16px' 
+            borderRadius: {
+              xl: '18px',
+              '2xl': '26px',
             },
             boxShadow: {
-              card: '0 1px 2px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.06)',
-              focus: '0 0 0 2px rgba(239, 68, 68, .4)'
+              card: '0 24px 60px rgba(15, 23, 42, 0.12)',
             },
-            fontFamily: {
-              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-            },
-          }
-        }
-      }
+          },
+        },
+      };
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
-    "react/": "https://aistudiocdn.com/react@^19.1.1/",
-    "react": "https://aistudiocdn.com/react@^19.1.1",
-    "vite": "https://aistudiocdn.com/vite@^7.1.4",
-    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.0.2",
-    "msw": "https://aistudiocdn.com/msw@^2.4.1",
-    "msw/browser": "https://aistudiocdn.com/msw@^2.4.1/browser",
-    "msw/": "https://aistudiocdn.com/msw@^2.11.1/",
-    "firebase/": "https://aistudiocdn.com/firebase@^12.2.1/"
-  }
-}
-</script>
-</head>
-  <body class="text-text">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-transparent text-slate-900">
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

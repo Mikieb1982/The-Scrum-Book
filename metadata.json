@@ -1,5 +1,5 @@
 {
   "name": "The Scrum Book",
-  "description": "A web application for rugby league fans to track live scores, schedules, and matches they've attended. Match data provided by TheSportsDB.com.",
+  "description": "A tile-based Rugby League match tracker built with React, Vite, and Firebase-ready services.",
   "requestFramePermissions": []
 }
