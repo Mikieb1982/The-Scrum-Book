@@ -2,14 +2,16 @@
 ```md
 # The Scrum Book
 
-The Scrum Book is a tile-based React + Vite application that helps rugby league fans build a personal log of matches they have attended. The MVP focuses on a single competition (the 2026 Betfred Super League), ships with a seeded fixture list, and is ready to connect to your own Firebase project for persistence.
+![The Scrum Book logo](public/logo.png)
+
+The Scrum Book is a modern React + Vite application that helps rugby league fans build a personal log of matches they have attended. The MVP focuses on a single competition (the 2026 Betfred Super League), ships with a seeded fixture list, and is ready to connect to your own Firebase project for persistence.
 
 ---
 
 ## Features
 
 - **Match Browser** — search and filter the full season fixture list and mark games you attended.
-- **Match Detail View** — review venue notes, broadcast info, and log a match to your Scrum Book in one click.
+- **Match Day dashboards** — jump to the fixtures happening soon or near you with tailored views.
 - **My Scrum Book** — track total matches, unique venues, and revisit the games you have already logged.
 - **Offline-friendly seed data** — local fixtures and venues power the UI until you wire up Firestore.
 
@@ -19,17 +21,19 @@ The Scrum Book is a tile-based React + Vite application that helps rugby league 
 
 ```
 
-src/
-├── App.tsx                  # View orchestration and layout shell
-├── components/              # Tile, header, filters, and list components
-├── content/fixtures.ts      # Seeded venues and 2026 Super League fixtures
-├── firebase.ts              # Optional Firebase initialisation (falls back to local data)
-├── hooks/useScrumBook.ts    # Data loading, filtering, and attendance helpers
-├── services/matchService.ts # Firestore + local persistence utilities
-├── types.ts                 # Shared TypeScript types
-└── views/                   # Browser, detail, and My Scrum Book screens
+.
+├── App.tsx                # Root view orchestration and layout shell
+├── components/            # Feature views and shared UI components
+├── contexts/              # React context providers (auth, theme, etc.)
+├── hooks/                 # Custom hooks for theme, storage, and location
+├── services/              # Data fetching, Firebase helpers, and mock data
+├── utils/                 # Small shared utilities
+├── index.tsx              # Vite entry point that renders <App />
+├── public/                # Static assets (logo, favicon, manifest)
+├── types.ts               # Shared TypeScript models
+└── vite.config.ts         # Vite build configuration
 
-````
+```
 
 ---
 
@@ -48,17 +52,29 @@ src/
 npm install
 ````
 
-### 2. Run the dev server
+### 2. Configure Google Sign-In
+
+Copy the example environment file and update the placeholder with your Google OAuth web client ID. The value must match the
+client configured for this project's origin in the Google Cloud Console.
+
+```bash
+cp .env.example .env.local
+# then edit .env.local and replace the placeholder client ID
+```
+
+Restart the dev server after editing `.env.local` so Vite can pick up the new environment variable.
+
+### 3. Run the dev server
 
 ```bash
 npm run dev
 ```
 
-The server prints a local URL you can open in your browser. Hot module replacement is enabled for rapid iteration on tile copy and layout tweaks.
+The server prints a local URL you can open in your browser. Hot module replacement is enabled for rapid iteration on copy and layout tweaks.
 
 > ✅ No Firebase account is required to run the MVP. The app works entirely offline using the seeded fixtures and localStorage.
 
-### 3. Build for production
+### 4. Build for production
 
 ```bash
 npm run build
@@ -73,32 +89,32 @@ The bundled assets are output to `dist/`. Use `npm run preview` to run the produ
 * `npm run dev` — start dev server with HMR
 * `npm run build` — bundle production assets
 * `npm run preview` — serve production build locally
-* `npm run deploy` — deploy to GitHub Pages
+* `npm run firebase:login` — authenticate with the Firebase CLI before your first deploy
+* `npm run firebase:serve` — run the Firebase Hosting emulator to test the built app locally
+* `npm run firebase:deploy` — build the project and deploy the `dist/` folder to Firebase Hosting
 
 ---
 
 ## Firebase Integration (Optional)
 
-Copy the example environment file to start wiring up your own Firebase project:
+This build runs entirely offline using localStorage. To connect your own Firebase project, reinstall the `firebase` dependency and recreate a `firebase.ts` initialiser that exports `auth`, `db`, and `storage` instances. Copy `.env.example` to `.env.local`, populate the keys from the Firebase console, and restart the dev server so Vite picks up the changes.
 
-```bash
-cp .env.example .env.local
-```
+### Enable Google Sign-In
 
-Update `.env.local` with the values from **Project Settings → General → Your apps → Web app** in the Firebase console:
+1. In the Firebase console, open **Build → Authentication → Sign-in method** and enable the **Google** provider. Configure the support email when prompted so users can sign in with their Google account.
+2. Still in **Project settings → General**, scroll to **Your apps** and add the SHA-1 release fingerprint for every Android app that should support Google Sign-In. This step is required for Google to trust the OAuth client.
+3. In **Project settings → General → Your project**, update the **Public-facing name** so it matches `project-99200945430`. Firebase uses this value during the Google account consent screen.
+4. Update your `.env.local` file in the project root with your web client ID so the frontend can call Google directly:
 
-```
-VITE_FIREBASE_API_KEY=your-api-key
-VITE_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your-project-id
-VITE_FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
-VITE_FIREBASE_APP_ID=your-app-id
-```
+   ```bash
+   # If you have not already created the file:
+   cp .env.example .env.local
+   # Then edit .env.local and replace the placeholder with your client ID
 
-Restart `npm run dev` after saving the file. When the keys are missing the app falls back to the seeded fixtures and stores attendance locally in `localStorage`.
+   ```
 
----
+   Restart the dev server after saving the file. Without this value the Google button shows an actionable error instead of opening the consent screen.
+
 
 ## Firestore Data Model
 
@@ -129,7 +145,22 @@ Create the following collections to mirror the MVP structure:
   * Field: `attendedMatches: (string | { matchId: string; attendedOn: string })[]`
 
 Seed the collections manually in the Firestore console while you build the UI.
-The default fixture list in `src/content/fixtures.ts` mirrors the 2026 season so you can copy/paste values during the initial import.
+The default fixture list in `services/mockData.ts` mirrors the 2026 season so you can copy/paste values during the initial import.
+
+---
+
+## Continuous Deployment to Firebase Hosting
+
+This repository includes a GitHub Actions workflow (`.github/workflows/firebase-hosting.yml`) that builds the app and deploys it to Firebase Hosting every time you push to the `main` branch.
+
+1. Create a Firebase service account with the **Firebase Hosting Admin** role and download the JSON credentials file.
+2. In your GitHub repository settings, add the following secrets:
+   - `FIREBASE_SERVICE_ACCOUNT` — the full JSON of the service account credentials.
+   - `FIREBASE_PROJECT_ID` — the target Firebase project ID (for example, `the-scrum-book`).
+3. Update `.firebaserc` so the `default` project matches the value of `FIREBASE_PROJECT_ID`.
+4. Push to `main` (or trigger the workflow manually from the **Actions** tab) to build the project and deploy to Firebase Hosting.
+
+The workflow uses `npm ci` and `npm run build` to ensure the production bundle is valid before publishing. Deployment status is reported directly in the pull request or commit checks.
 
 ---
 
@@ -157,21 +188,44 @@ service cloud.firestore {
 ## Customising the Template
 
 1. **Branding** — update the CSS custom properties in `index.html` to change gradients and accent colours.
-2. **Fixtures** — edit `src/content/fixtures.ts` to swap in a different competition or off-season friendly schedule.
-3. **Copy & Tiles** — adjust the hero copy in `src/components/Header.tsx` and tile content in the view components.
-4. **Data Sources** — replace the seed fetch helpers in `src/services/matchService.ts` with API calls or additional Firestore queries as you scale beyond the MVP.
+2. **Fixtures** — edit `services/mockData.ts` to swap in a different competition or off-season friendly schedule.
+3. **Copy & Layout** — adjust the hero copy in `components/Header.tsx` and the supporting view components.
+4. **Data Sources** — replace the seed fetch helpers in `services/apiService.ts` with API calls or additional Firestore queries as you scale beyond the MVP.
 
 ---
 
 ## Deployment
 
-The project includes a Pages-friendly script if you want to ship to GitHub Pages:
+The repository is pre-configured for Firebase Hosting. To deploy the built app:
 
-```bash
-npm run deploy
-```
+1. Install the Firebase CLI if you have not already:
 
-Update the `homepage` field in `package.json` to point at your repository slug before deploying. Any static host that can serve the files in `dist/` will work.
+   ```bash
+   npm install -g firebase-tools
+   ```
+
+2. Authenticate once on your machine:
+
+   ```bash
+   npm run firebase:login
+   ```
+
+3. Build and deploy:
+
+   ```bash
+   npm run firebase:deploy
+   ```
+
+The Firebase configuration in `firebase.json` rewrites all routes to `index.html` so that client-side routing works as expected.
+Update `.firebaserc` (or run `firebase use --add`) so that the `default` project matches your Firebase Hosting site before deploying.
+
+---
+
+## FAQ
+
+### What are "binary files" and why do tools mention them?
+
+Binary files are assets that are not stored as plain human-readable text—think images (`.png`, `.jpg`), fonts, audio, or compiled application bundles. Git can version these files, but many automated review tools skip showing their diffs because the raw bytes do not translate into meaningful text comparisons. When you see a warning such as "Binary files are not supported," it usually means the tool cannot preview changes to those assets inline. The files themselves are still tracked in the repository and ship with the app as expected.
 
 ---
 
@@ -180,7 +234,6 @@ Update the `homepage` field in `package.json` to point at your repository slug b
 Pull requests are welcome. For major changes, please open an issue first to discuss your ideas.
 
 ---
-
 ## License
 
 MIT

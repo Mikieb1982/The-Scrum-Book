@@ -21,18 +21,21 @@ import { NearbyMatchesView } from './components/NearbyMatchesView';
 import { DataUploader } from './components/DataUploader';
 import { CommunityView } from './components/CommunityView';
 import { LoginPromptView } from './components/LoginPromptView';
-import { PredictionGamesView } from './components/PredictionGamesView';
+import { LogoIcon } from './components/Icons';
+import { syncThemeWithFavouriteTeam } from './utils/themeUtils';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<View>('UPCOMING');
+  const [view, setView] = useState<View>('PROFILE');
   const [theme, toggleTheme] = useTheme();
+  const themeMode = theme === 'dark' ? 'dark' : 'light';
 
-  const { currentUser, profile, loading: authLoading, login, logout, addAttendedMatch, removeAttendedMatch, updateUser, saveUserPrediction, deleteUserPrediction } = useAuth();
-  
+  const { currentUser, profile, loading: authLoading, login, logout, addAttendedMatch, removeAttendedMatch, updateUser } = useAuth();
+
   const [matches, setMatches] = useState<Match[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const initialLoadStarted = useRef(false);
+  const favouriteTeamId = profile?.user.favoriteTeamId;
 
   const loadAppData = useCallback(async () => {
     setLoading(true);
@@ -55,6 +58,10 @@ const App: React.FC = () => {
     }
   }, [loadAppData]);
 
+  useEffect(() => {
+    syncThemeWithFavouriteTeam(favouriteTeamId, themeMode);
+  }, [favouriteTeamId, themeMode]);
+
   const handleAttend = (match: Match) => {
     if (!currentUser) {
       setView('PROFILE'); // Will be caught by the protected view logic and show the prompt
@@ -70,7 +77,7 @@ const App: React.FC = () => {
       removeAttendedMatch(matchId);
     }
   };
-  
+
   const renderContent = () => {
     if (error) {
       return <ErrorDisplay message={error} onRetry={loadAppData} />;
@@ -82,16 +89,16 @@ const App: React.FC = () => {
       </div>;
     }
 
-    const protectedViews: View[] = ['MY_MATCHES', 'STATS', 'BADGES', 'PROFILE', 'COMMUNITY', 'ADMIN', 'PREDICTION_GAMES'];
+    const protectedViews: View[] = ['MY_MATCHES', 'STATS', 'BADGES', 'PROFILE', 'COMMUNITY', 'ADMIN'];
     if (!currentUser && protectedViews.includes(view)) {
-      return <LoginPromptView onLogin={login} />;
+      return <LoginPromptView onLogin={login} theme={themeMode} />;
     }
-    
+
     // While authenticating, show a spinner for protected views
     if (authLoading && protectedViews.includes(view)) {
       return <div className="flex flex-col items-center justify-center h-64"><LoadingSpinner /><p className="mt-4 text-text-subtle">Connecting...</p></div>;
     }
-    
+
     const attendedMatchIds = profile?.attendedMatches.map(am => am.match.id) || [];
 
     switch (view) {
@@ -127,8 +134,8 @@ const App: React.FC = () => {
       case 'GROUNDS':
         return <GroundsView />;
       case 'ABOUT':
-        return <AboutView />;
-      
+        return <AboutView theme={themeMode} />;
+
       // Protected Routes
       case 'MY_MATCHES':
         return profile ? <MyMatchesView attendedMatches={profile.attendedMatches} onRemove={handleUnattend} /> : <LoadingSpinner />;
@@ -138,13 +145,6 @@ const App: React.FC = () => {
         return profile ? <BadgesView allBadges={allBadges} earnedBadgeIds={profile.earnedBadgeIds} /> : <LoadingSpinner />;
       case 'COMMUNITY':
         return <CommunityView />;
-      case 'PREDICTION_GAMES':
-        return profile ? <PredictionGamesView
-                  matches={matches}
-                  predictions={profile.predictions || []}
-                  onSavePrediction={saveUserPrediction}
-                  onDeletePrediction={deleteUserPrediction}
-                /> : <LoadingSpinner />;
       case 'PROFILE':
         return profile ? <ProfileView
                   user={profile.user}
@@ -178,8 +178,9 @@ const App: React.FC = () => {
       </main>
       <MobileNav currentView={view} setView={setView} currentUser={currentUser} />
       <footer className="hidden md:block text-center py-8 text-sm text-text-subtle/90 border-t border-border mt-4 bg-surface/70 backdrop-blur">
+        <LogoIcon className="w-12 h-12 mx-auto mb-3" theme={themeMode} />
         <p className="font-semibold text-text">The Scrum Book</p>
-        <p className="mt-1">A living playbook for product teams who want to move from theory to shipping value every sprint.</p>
+        <p className="mt-1">Your ultimate rugby league companion. Track matches, earn badges, and connect with other fans.</p>
       </footer>
     </div>
   );

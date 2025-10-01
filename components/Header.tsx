@@ -1,18 +1,54 @@
-import React from 'react';
-import { CalendarIcon, InformationCircleIcon, TableCellsIcon, SunIcon, MoonIcon, CalendarDaysIcon, UserCircleIcon, BuildingStadiumIcon, LogoIcon, LocationMarkerIcon, UsersIcon, ArrowRightOnRectangleIcon, ClipboardDocumentCheckIcon } from './Icons';
-import type { View } from '../types';
-import type firebase from 'firebase/compat/app';
-
+import React, { useState, useEffect } from 'react';
+import {
+  CalendarIcon,
+  InformationCircleIcon,
+  TableCellsIcon,
+  SunIcon,
+  MoonIcon,
+  CalendarDaysIcon,
+  UserCircleIcon,
+  BuildingStadiumIcon,
+  LogoIcon,
+  LocationMarkerIcon,
+  UsersIcon,
+  ArrowRightOnRectangleIcon,
+} from './Icons';
+import type { View, AuthUser } from '../types';
+import styles from './Header.module.css'; // Import the CSS module
 
 interface HeaderProps {
   currentView: View;
   setView: (view: View) => void;
   theme: string;
   toggleTheme: () => void;
-  currentUser: firebase.User | null;
+  currentUser: AuthUser | null;
 }
 
 export const Header: React.FC<HeaderProps> = ({ currentView, setView, theme, toggleTheme, currentUser }) => {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      if (typeof window !== 'undefined') {
+        if (window.scrollY > lastScrollY && window.scrollY > 80) { // If scrolling down and past 80px
+          setIsVisible(false);
+        } else { // If scrolling up
+          setIsVisible(true);
+        }
+        setLastScrollY(window.scrollY);
+      }
+    };
+
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
+
   const NavButton: React.FC<{
     view: View;
     label: string;
@@ -37,11 +73,13 @@ export const Header: React.FC<HeaderProps> = ({ currentView, setView, theme, tog
   const isProfileActive = ['PROFILE', 'MY_MATCHES', 'STATS', 'BADGES', 'GROUNDS', 'ADMIN'].includes(currentView);
 
   return (
-    <header className="bg-surface shadow-sm sticky top-0 z-10 border-b border-border">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        <div className="flex items-center gap-3">
-          <LogoIcon className="w-8 h-8 text-primary" />
-          <h1 className="text-xl md:text-2xl font-bold text-text-strong">The Scrum Book</h1>
+    <header className={`${styles.header} ${!isVisible ? styles.header_hidden : ''}`}>
+      <div className="container mx-auto flex justify-between items-center p-2">
+        <div className="flex items-center">
+          <LogoIcon
+            className="h-10 w-auto text-primary object-contain"
+            theme={theme === 'dark' ? 'dark' : 'light'}
+          />
         </div>
         <div className="flex items-center gap-2 md:gap-4">
             <nav className="hidden md:flex items-center gap-1">
@@ -70,7 +108,6 @@ export const Header: React.FC<HeaderProps> = ({ currentView, setView, theme, tog
               <NavButton view="MATCH_DAY" label="Fixtures & Results" icon={<CalendarDaysIcon className="w-5 h-5" />} />
               <NavButton view="LEAGUE_TABLE" label="League Table" icon={<TableCellsIcon className="w-5 h-5" />} />
               <NavButton view="GROUNDS" label="Grounds" icon={<BuildingStadiumIcon className="w-5 h-5" />} />
-              <NavButton view="PREDICTION_GAMES" label="Predictions" icon={<ClipboardDocumentCheckIcon className="w-5 h-5" />} />
               <NavButton view="COMMUNITY" label="Community" icon={<UsersIcon className="w-5 h-5" />} />
               <NavButton view="ABOUT" label="About" icon={<InformationCircleIcon className="w-5 h-5" />} />
             </nav>
