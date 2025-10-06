@@ -5,7 +5,7 @@ import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyAQn_UqDjEOrCP0iHF0Np3O-2BPGwMkutU",
   authDomain: "the-scrum-book.firebaseapp.com",
-  projectId: "the-scrum-book"
+  projectId: "the-scrum-book",
   // storageBucket/auth/etc optional for now
 };
 
