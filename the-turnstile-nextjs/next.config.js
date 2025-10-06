@@ -1,7 +1,7 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
+  output: 'export',
   images: { unoptimized: true },
-  reactStrictMode: true,
-  eslint: { ignoreDuringBuilds: true },
-  typescript: { ignoreBuildErrors: true },
-  output: "export"
+  eslint: { ignoreDuringBuilds: true },      // keep for now
+  typescript: { ignoreBuildErrors: true }    // keep for now
 };
