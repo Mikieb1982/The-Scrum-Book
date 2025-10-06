@@ -1,39 +1,69 @@
-'use client';
+"use client";
 
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 
-import { useState, useEffect } from 'react';
+const isBrowser = () => typeof window !== "undefined" && typeof window.localStorage !== "undefined";
 
-export const useLocalStorage = <T,>(key: string, initialValue: T): [T, React.Dispatch<React.SetStateAction<T>>] => {
-  const [storedValue, setStoredValue] = useState<T>(() => {
-    try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch (error) {
-      console.error(error);
+export const useLocalStorage = <T,>(
+  key: string,
+  initialValue: T,
+): [T, Dispatch<SetStateAction<T>>] => {
+  const readValue = () => {
+    if (!isBrowser()) {
       return initialValue;
     }
-  });
 
-  const setValue = (value: T | ((val: T) => T)) => {
     try {
-      const valueToStore = value instanceof Function ? value(storedValue) : value;
-      setStoredValue(valueToStore);
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+      const item = window.localStorage.getItem(key);
+      return item ? (JSON.parse(item) as T) : initialValue;
     } catch (error) {
-      console.error(error);
+      console.warn(`Failed to read localStorage key "${key}"`, error);
+      return initialValue;
     }
   };
 
-  useEffect(() => {
-     try {
-        const item = window.localStorage.getItem(key);
-        if (item) {
-            setStoredValue(JSON.parse(item));
+  const [storedValue, setStoredValue] = useState<T>(readValue);
+
+  const setValue: Dispatch<SetStateAction<T>> = (value) => {
+    setStoredValue((currentValue) => {
+      const valueToStore = value instanceof Function ? value(currentValue) : value;
+
+      if (isBrowser()) {
+        try {
+          window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        } catch (error) {
+          console.warn(`Failed to write localStorage key "${key}"`, error);
         }
-     } catch (error) {
-        console.error(error)
-     }
-  }, [key]);
+      }
+
+      return valueToStore;
+    });
+  };
+
+  useEffect(() => {
+    if (!isBrowser()) {
+      return undefined;
+    }
+
+    setStoredValue(readValue());
+
+    const handleStorage = (event: StorageEvent) => {
+      if (event.key !== key) {
+        return;
+      }
+
+      try {
+        setStoredValue(event.newValue ? (JSON.parse(event.newValue) as T) : initialValue);
+      } catch (error) {
+        console.warn(`Failed to synchronise localStorage key "${key}"`, error);
+      }
+    };
+
+    window.addEventListener("storage", handleStorage);
+    return () => {
+      window.removeEventListener("storage", handleStorage);
+    };
+  }, [initialValue, key]);
 
   return [storedValue, setValue];
 };

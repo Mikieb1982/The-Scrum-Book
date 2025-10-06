@@ -1,24 +1,31 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useLocalStorage } from './useLocalStorage';
+import { useCallback, useEffect } from "react";
 
-export const useTheme = (): [string, () => void] => {
-  // Default to dark, but the user's preference in localStorage will override it.
-  const [theme, setTheme] = useLocalStorage<string>('theme', 'dark');
+import { useLocalStorage } from "./useLocalStorage";
+
+type Theme = "light" | "dark";
+
+const THEME_STORAGE_KEY = "theme";
+const DEFAULT_THEME: Theme = "dark";
+
+export const useTheme = (): [Theme, () => void] => {
+  const [theme, setTheme] = useLocalStorage<Theme>(THEME_STORAGE_KEY, DEFAULT_THEME);
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    const isDark = theme === 'dark';
-    
-    root.classList.remove(isDark ? 'light' : 'dark');
-    root.classList.add(theme);
+    if (typeof document === "undefined") {
+      return;
+    }
 
+    const root = document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(theme);
+    root.dataset.theme = theme;
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
+  const toggleTheme = useCallback(() => {
+    setTheme((current) => (current === "dark" ? "light" : "dark"));
+  }, [setTheme]);
 
   return [theme, toggleTheme];
 };
