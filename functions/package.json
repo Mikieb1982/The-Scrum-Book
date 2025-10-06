@@ -2,9 +2,9 @@
   "name": "turnstile-functions",
   "version": "1.0.0",
   "description": "Cloud Functions API for The Turnstile",
-  "main": "lib/index.js",
-  "type": "commonjs",
   "private": true,
+  "type": "commonjs",
+  "main": "lib/index.js",
   "engines": { "node": "20" },
   "scripts": {
     "build": "tsc",
@@ -18,9 +18,9 @@
     "firebase-functions": "^5.0.1"
   },
   "devDependencies": {
-    "typescript": "^5.3.3",
-    "eslint": "^8.55.0",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
-    "@typescript-eslint/parser": "^6.13.1"
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.55.0",
+    "typescript": "^5.3.3"
   }
 }
