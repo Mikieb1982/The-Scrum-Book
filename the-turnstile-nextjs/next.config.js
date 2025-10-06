@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   output: 'export',
   images: { unoptimized: true },
-  eslint: { ignoreDuringBuilds: true },      // keep for now
-  typescript: { ignoreBuildErrors: true }    // keep for now
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true }
 };
- 
+module.exports = nextConfig;
