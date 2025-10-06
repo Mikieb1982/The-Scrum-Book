@@ -5,3 +5,4 @@ module.exports = {
   eslint: { ignoreDuringBuilds: true },      // keep for now
   typescript: { ignoreBuildErrors: true }    // keep for now
 };
+ 
