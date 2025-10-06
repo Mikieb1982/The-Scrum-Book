@@ -1,11 +1,17 @@
-import type { Match, LeagueStanding } from '@/types';
-import { mockMatches, mockLeagueTable } from './mockData';
+import type { LeagueStanding, Match } from "@/types";
+
+import { mockMatches, mockLeagueTable } from "./mockData";
 
 export type ApiDataSource = 'firestore' | 'api-mock' | 'local-mock';
 
 export interface ApiResult<T> {
   data: T;
   source: ApiDataSource;
+}
+
+export interface HealthStatus {
+  ok: boolean;
+  services?: Record<string, string>;
 }
 
 const normaliseBaseUrl = (value: string | undefined | null) => {
@@ -18,12 +24,12 @@ const normaliseBaseUrl = (value: string | undefined | null) => {
 };
 
 const resolvedEnvBaseUrl = normaliseBaseUrl(process.env.NEXT_PUBLIC_API_BASE_URL);
-const API_BASE_URL = resolvedEnvBaseUrl || '/api';
+const API_BASE_URL = resolvedEnvBaseUrl || "/api";
 
 const isRelativeApi = API_BASE_URL === '/api';
 
 const logOfflineFallback = (collection: string, reason?: string) => {
-  const suffix = reason ? ` (${reason})` : '';
+  const suffix = reason ? ` (${reason})` : "";
   console.info(`Using local mock data for ${collection}.${suffix}`);
 };
 
@@ -58,13 +64,21 @@ const fetchFromApi = async <T>(path: string, fallback: () => T, collection: stri
     if (!isRelativeApi || !isFetchError) {
       console.error(`Failed to fetch ${collection}:`, error);
     }
-    logOfflineFallback(collection, isRelativeApi ? 'internal API unavailable' : undefined);
-    return { data: fallback(), source: 'local-mock' };
+    logOfflineFallback(collection, isRelativeApi ? "internal API unavailable" : undefined);
+    return { data: fallback(), source: "local-mock" };
   }
 };
 
+const fallbackHealthStatus: HealthStatus = {
+  ok: false,
+  services: { api: "offline" },
+};
+
+export const fetchHealthStatus = async (): Promise<ApiResult<HealthStatus>> =>
+  fetchFromApi<HealthStatus>("/health", () => fallbackHealthStatus, "health");
+
 export const fetchMatches = async (): Promise<ApiResult<Match[]>> =>
-  fetchFromApi<Match[]>('/matches', () => mockMatches, 'matches');
+  fetchFromApi<Match[]>("/matches", () => mockMatches, "matches");
 
 export const fetchLeagueTable = async (): Promise<ApiResult<LeagueStanding[]>> =>
-  fetchFromApi<LeagueStanding[]>('/league-table', () => mockLeagueTable, 'league table');
+  fetchFromApi<LeagueStanding[]>("/league-table", () => mockLeagueTable, "league table");
