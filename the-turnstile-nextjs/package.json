@@ -2,14 +2,12 @@
   "name": "the-turnstile-nextjs",
   "version": "0.1.0",
   "private": true,
+  {
   "scripts": {
-    "dev": "npm run clean && next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "lint": "next lint",
-    "test": "jest",
-    "clean": "rimraf ./.next ./out"
-  },
+    "build": "next build && next export"
+  }
+}
+
   "dependencies": {
     "@sentry/react": "^7.119.0",
     "next": "14.2.5",
