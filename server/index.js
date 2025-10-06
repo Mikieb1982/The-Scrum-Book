@@ -64,9 +64,13 @@ const respondWithMockData = (res, collection, error) => {
   } else {
     console.info(`Firestore not configured. Serving mock ${collection} data.`);
   }
-
   res.set('x-data-source', 'mock');
-  const payload = collection === 'matches' ? getMockMatches() : getMockLeagueTable();
+
+  const payload =
+    collection === 'matches'
+      ? { matches: getMockMatches() }
+      : { leagueTable: getMockLeagueTable() };
+
   res.status(200).json(payload);
 };
 
@@ -95,6 +99,15 @@ app.get('/', (req, res) => {
   res.send('Server is running');
 });
 
+app.get('/api/health', (_req, res) => {
+  res.json({
+    ok: true,
+    services: {
+      firestore: firestoreAvailable ? 'ok' : 'unavailable (serving mock data)'
+    }
+  });
+});
+
 app.get('/api/matches', async (req, res) => {
   await withFirestore(
     res,
@@ -103,7 +116,7 @@ app.get('/api/matches', async (req, res) => {
       const snapshot = await db.collection('matches').get();
       const matches = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
       res.set('x-data-source', 'firestore');
-      res.json(matches);
+      res.json({ matches });
     },
     (error) => respondWithMockData(res, 'matches', error)
   );
@@ -112,14 +125,14 @@ app.get('/api/matches', async (req, res) => {
 app.get('/api/league-table', async (req, res) => {
   await withFirestore(
     res,
-    'league table',
+    'leagueTable',
     async () => {
       const snapshot = await db.collection('leagueTable').get();
       const leagueTable = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
       res.set('x-data-source', 'firestore');
-      res.json(leagueTable);
+      res.json({ leagueTable });
     },
-    (error) => respondWithMockData(res, 'league table', error)
+    (error) => respondWithMockData(res, 'leagueTable', error)
   );
 });
 
