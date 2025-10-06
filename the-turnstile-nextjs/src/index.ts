@@ -1,21 +1,31 @@
-import * as functions from "firebase-functions";
-import * as admin from "firebase-admin";
-import express from "express";
-import cors from "cors";
+import { useEffect, useState } from "react";
+import { db } from "@/lib/firebase";
+import { collection, getDocs } from "firebase/firestore";
 
-if (!admin.apps.length) admin.initializeApp();
+type Match = { id: string; [k: string]: any };
 
-const app = express();
-app.use(express.json());
-app.use(cors());
+export default function Home() {
+  const [status, setStatus] = useState<"loading"|"ok"|"fail">("loading");
+  const [matches, setMatches] = useState<Match[]>([]);
 
-app.get("/matches", async (_req, res) => {
-  // TODO: read from Firestore when ready
-  // const db = admin.firestore();
-  // const snap = await db.collection("matches").get();
-  // const matches = snap.docs.map(d => ({ id: d.id, ...d.data() }));
-  const matches: any[] = []; // placeholder
-  res.json({ matches });
-});
+  useEffect(() => {
+    (async () => {
+      try {
+        const snap = await getDocs(collection(db, "matches"));
+        const rows = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        setMatches(rows);
+        setStatus("ok");
+      } catch {
+        setStatus("fail");
+      }
+    })();
+  }, []);
 
-export const api = functions.https.onRequest(app);
+  return (
+    <main style={{ padding: 24, fontFamily: "system-ui, Arial" }}>
+      <h1>The Turnstile</h1>
+      <p>Firestore status: <strong>{status}</strong></p>
+      <p>Matches: <strong>{matches.length}</strong></p>
+    </main>
+  );
+}
