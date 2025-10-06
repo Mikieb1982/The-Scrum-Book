@@ -1,9 +1,8 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "the-turnstile-nextjs/out",
     "ignore": ["**/.*", "**/node_modules/**"],
     "cleanUrls": true,
-    "rewrites": [{ "source": "**", "destination": "/index.html" }],
     "headers": [
       { "source": "**/*.@(js|css)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
       { "source": "/index.html", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }
