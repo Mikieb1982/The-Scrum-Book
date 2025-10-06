@@ -41,7 +41,7 @@ jobs:
       - name: List export
         run: ls -la the-turnstile-nextjs/out || true
 
-      # ---- BACKEND ----
+      # ---- BACKEND ---- 
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
