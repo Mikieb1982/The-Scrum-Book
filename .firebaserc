@@ -1,5 +1,3 @@
 {
-  "projects": {
-    "default": "the-scrum-book"
-  }
+  "projects": { "default": "${FIREBASE_PROJECT_ID}" }
 }
