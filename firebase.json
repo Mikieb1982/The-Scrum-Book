@@ -1,6 +1,7 @@
 {
   "functions": { "source": "functions" },
   "hosting": {
+    "site": "the-scrum-book",
     "public": "the-turnstile-nextjs/out",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
