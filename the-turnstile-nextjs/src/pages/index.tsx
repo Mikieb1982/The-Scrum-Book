@@ -4,24 +4,26 @@ type Health = { ok: boolean };
 type Matches = { matches: any[] };
 
 export default function Home() {
-  return <main style={{padding:24,fontFamily:"system-ui"}}><h1>The Turnstile</h1></main>;
-}
-
-  const [health, setHealth] = useState<string>("checking…");
-  const [count, setCount] = useState<number>(0);
+  const [health, setHealth] = useState<"checking…" | "ok" | "fail">("checking…");
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    // check backend function
-    fetch("/api/health")
-      .then(r => r.json())
-      .then((d: Health) => setHealth(d.ok ? "ok" : "fail"))
-      .catch(() => setHealth("fail"));
+    const run = async () => {
+      try {
+        const h = (await (await fetch("/api/health")).json()) as Health;
+        setHealth(h.ok ? "ok" : "fail");
+      } catch {
+        setHealth("fail");
+      }
 
-    // example data call
-    fetch("/api/matches")
-      .then(r => r.json())
-      .then((d: Matches) => setCount(d.matches?.length ?? 0))
-      .catch(() => setCount(0));
+      try {
+        const m = (await (await fetch("/api/matches")).json()) as Matches;
+        setCount(Array.isArray(m.matches) ? m.matches.length : 0);
+      } catch {
+        setCount(0);
+      }
+    };
+    run();
   }, []);
 
   return (
