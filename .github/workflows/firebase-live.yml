@@ -16,34 +16,61 @@ jobs:
         with:
           node-version: '20'
 
-      # ---- DIAG: confirm paths/files ----
-      - name: Show repo root
+      # ---- Detect the Next.js app directory automatically ----
+      - name: Detect FRONTEND_DIR
+        id: detect
         run: |
-          pwd
-          ls -la
-          echo "----------"
-          find . -maxdepth 3 -type f -name package.json -print
+          echo "Searching for a package.json that depends on Next…"
+          CANDIDATES=$(grep -Rsl '"next":' -n */package.json || true)
+          echo "Candidates:"
+          echo "${CANDIDATES}"
+          FRONTEND_DIR=$(dirname $(echo "${CANDIDATES}" | head -n1))
+          if [ -z "${FRONTEND_DIR}" ]; then
+            echo "No Next app found. Fail."
+            exit 1
+          fi
+          echo "FRONTEND_DIR=${FRONTEND_DIR}" | tee -a $GITHUB_ENV
 
-      - name: Show frontend folder
+      - name: Show detected FRONTEND_DIR
         run: |
-          if [ -d the-turnstile-nextjs ]; then ls -la the-turnstile-nextjs; else echo "MISSING: the-turnstile-nextjs"; fi
-          if [ -f the-turnstile-nextjs/package.json ]; then cat the-turnstile-nextjs/package.json; else echo "MISSING: the-turnstile-nextjs/package.json"; fi
+          echo "FRONTEND_DIR=$FRONTEND_DIR"
+          ls -la "$FRONTEND_DIR"
+          cat "$FRONTEND_DIR/package.json"
 
-      # ---- FRONTEND (FORCE FOLDER WITH --prefix) ----
+      # ---- FRONTEND (install + build) ----
       - name: Install frontend deps
-        run: npm --prefix the-turnstile-nextjs install --no-audit --no-fund
+        run: npm --prefix "$FRONTEND_DIR" install --no-audit --no-fund
 
       - name: Verify Next installed
         run: |
-          npx --prefix the-turnstile-nextjs next --version
-          npm --prefix the-turnstile-nextjs ls next
+          npx --prefix "$FRONTEND_DIR" next --version
+          ls -la "$FRONTEND_DIR/node_modules/.bin" || true
 
       - name: Build static export
-        run: npm --prefix the-turnstile-nextjs run build
+        run: npm --prefix "$FRONTEND_DIR" run build
 
       - name: List export
-        run: ls -la the-turnstile-nextjs/out || true
+        run: ls -la "$FRONTEND_DIR/out" || true
 
-      # ---- BACKEND ----
+      # ---- BACKEND (functions) ----
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
+
+      - name: Install functions deps
+        run: npm --prefix functions install --no-audit --no-fund
+
+      - name: Build functions
+        run: npm --prefix functions run build
+
+      # ---- DEPLOY ----
+      - name: Auth for deploy
+        run: echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' > $HOME/firebase-key.json
+
+      - name: Deploy hosting + functions
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: $HOME/firebase-key.json
+        run: |
+          # Use the detected frontend dir for Hosting
+          # Ensure firebase.json points to "$FRONTEND_DIR/out"
+          cat firebase.json
+          firebase deploy --only hosting,functions --project ${{ secrets.FIREBASE_PROJECT_ID }}
