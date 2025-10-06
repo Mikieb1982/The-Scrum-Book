@@ -20,12 +20,14 @@ jobs:
 
       # Frontend
       - name: Install frontend deps
-        working-directory: the-turnstile-nextjs
-        run: npm ci || npm install
+       working-directory: the-turnstile-nextjs
+       run: npm install --no-audit --no-fund
 
-      - name: Build static export
-        working-directory: the-turnstile-nextjs
-        run: npm run build
+
+       - name: Install functions deps
+        working-directory: functions
+        run: npm install --no-audit --no-fund
+
 
       - name: List export
         run: ls -la the-turnstile-nextjs/out
