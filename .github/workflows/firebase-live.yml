@@ -21,20 +21,23 @@ jobs:
             the-turnstile-nextjs/package-lock.json
             functions/package-lock.json
 
-      # --- FRONTEND ---
+      # ---------- FRONTEND ----------
       - name: Install frontend deps
         working-directory: the-turnstile-nextjs
         run: npm ci || npm install
 
-      - name: Build Next static export
+      - name: Verify Next is installed
+        working-directory: the-turnstile-nextjs
+        run: npx next --version
+
+      - name: Build static export
         working-directory: the-turnstile-nextjs
         run: npm run build
 
-      # (optional) sanity check
       - name: List build output
         run: ls -la the-turnstile-nextjs/out
 
-      # --- BACKEND ---
+      # ---------- BACKEND ----------
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
@@ -46,7 +49,7 @@ jobs:
         working-directory: functions
         run: npm run build
 
-      # --- DEPLOY ---
+      # ---------- DEPLOY ----------
       - name: Auth for deploy
         run: echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' > $HOME/firebase-key.json
 
