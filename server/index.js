@@ -11,7 +11,7 @@ const SERVICE_ACCOUNT_FILE = 'the-scrum-book-firebase-adminsdk-your-file-name.js
 if (!admin.apps.length) {
   try {
     const serviceAccountPath = path.join(__dirname, SERVICE_ACCOUNT_FILE);
-    
+
     if (!fs.existsSync(serviceAccountPath)) {
       throw new Error(`Service account file not found at: ${serviceAccountPath}`);
     }
@@ -20,7 +20,8 @@ if (!admin.apps.length) {
     console.log(`✅ Initializing Firebase with service account: ${serviceAccount.project_id}`);
 
     admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount)
+      credential: admin.credential.cert(serviceAccount),
+      projectId: serviceAccount.project_id
     });
   } catch (error) {
     console.error('❌ CRITICAL: Firebase Admin SDK initialization failed.', error.message);
@@ -28,9 +29,11 @@ if (!admin.apps.length) {
   }
 }
 
-const db = admin.firestore();
-
-// --- END: New Firebase Initialization ---
+const firestoreProjectId =
+  admin.app().options?.projectId ||
+  process.env.GOOGLE_CLOUD_PROJECT ||
+  process.env.GCLOUD_PROJECT ||
+  (process.env.FIREBASE_CONFIG && JSON.parse(process.env.FIREBASE_CONFIG).projectId);
 
 const db = admin.firestore();
 
