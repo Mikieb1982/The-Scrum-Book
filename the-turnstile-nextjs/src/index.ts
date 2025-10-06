@@ -9,8 +9,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/health", (_req, res) => res.json({ ok: true }));
-app.get("/fixtures", (_req, res) => res.json({ fixtures: [] }));
-app.get("/venues", (_req, res) => res.json({ venues: [] }));
+app.get("/matches", async (_req, res) => {
+  // TODO: read from Firestore when ready
+  // const db = admin.firestore();
+  // const snap = await db.collection("matches").get();
+  // const matches = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  const matches: any[] = []; // placeholder
+  res.json({ matches });
+});
 
 export const api = functions.https.onRequest(app);
