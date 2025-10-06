@@ -1,0 +1,24 @@
+name: Deploy the-turnstile to the-scrum-book.web.app
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: |
+          cd the-turnstile-nextjs
+          npm install --force
+          npx next build && npx next export
+      - name: Deploy Hosting only
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_THE_SCRUM_BOOK }}
+          channelId: live
+          projectId: the-scrum-book
