@@ -4,6 +4,9 @@ type Health = { ok: boolean };
 type Matches = { matches: any[] };
 
 export default function Home() {
+  return <main style={{padding:24,fontFamily:"system-ui"}}><h1>The Turnstile</h1></main>;
+}
+
   const [health, setHealth] = useState<string>("checking…");
   const [count, setCount] = useState<number>(0);
 
