@@ -44,8 +44,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const firestoreProjectId = admin.app().options?.projectId;
-
 if (!firestoreProjectId) {
   console.warn('Firestore project ID not detected. Firestore queries may fail; serving mock data if needed.');
 }
