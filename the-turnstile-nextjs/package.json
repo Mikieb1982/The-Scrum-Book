@@ -2,7 +2,6 @@
   "name": "the-turnstile-nextjs",
   "version": "0.1.0",
   "private": true,
- {
   "scripts": {
     "build": "next build && next export"
   }
