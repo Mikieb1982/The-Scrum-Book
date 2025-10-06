@@ -1,0 +1,48 @@
+name: Deploy to Firebase (hosting + functions)
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # --- FRONTEND BUILD ---
+      - name: Install frontend deps
+        working-directory: the-turnstile-nextjs
+        run: npm ci || npm install
+
+      - name: Build static export
+        working-directory: the-turnstile-nextjs
+        run: npm run build
+
+      # --- BACKEND BUILD ---
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Install backend deps
+        working-directory: functions
+        run: npm ci || npm install
+
+      - name: Build backend
+        working-directory: functions
+        run: npm run build
+
+      # --- DEPLOY TO FIREBASE ---
+      - name: Write service account key
+        run: echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' > $HOME/firebase-key.json
+
+      - name: Deploy hosting + functions
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: $HOME/firebase-key.json
+        run: firebase deploy --only hosting,functions --project ${{ secrets.FIREBASE_PROJECT_ID }}
