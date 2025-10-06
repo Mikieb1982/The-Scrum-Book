@@ -33,7 +33,7 @@ const firestoreProjectId =
   admin.app().options?.projectId ||
   process.env.GOOGLE_CLOUD_PROJECT ||
   process.env.GCLOUD_PROJECT ||
-  process.env.FIREBASE_CONFIG?.projectId;
+  (process.env.FIREBASE_CONFIG && JSON.parse(process.env.FIREBASE_CONFIG).projectId);
 
 const db = admin.firestore();
 
