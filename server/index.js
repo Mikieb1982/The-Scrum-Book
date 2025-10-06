@@ -1,5 +1,3 @@
-// --- START: New Firebase Initialization ---
-
 const express = require('express');
 const cors = require('cors');
 const admin = require('firebase-admin');
@@ -10,15 +8,15 @@ const { z } = require('zod');
 // IMPORTANT: Replace this with the real name of your downloaded JSON file
 const SERVICE_ACCOUNT_FILE = 'the-scrum-book-firebase-adminsdk-your-file-name.json';
 
-const serviceAccountKeyPath = path.resolve(__dirname, SERVICE_ACCOUNT_FILE);
-
 if (!admin.apps.length) {
   try {
-    if (!fs.existsSync(serviceAccountKeyPath)) {
-      throw new Error(`Service account file not found at: ${serviceAccountKeyPath}`);
+    const serviceAccountPath = path.join(__dirname, SERVICE_ACCOUNT_FILE);
+    
+    if (!fs.existsSync(serviceAccountPath)) {
+      throw new Error(`Service account file not found at: ${serviceAccountPath}`);
     }
 
-    const serviceAccount = require(serviceAccountKeyPath);
+    const serviceAccount = require(serviceAccountPath);
     console.log(`✅ Initializing Firebase with service account: ${serviceAccount.project_id}`);
 
     admin.initializeApp({
@@ -26,10 +24,11 @@ if (!admin.apps.length) {
     });
   } catch (error) {
     console.error('❌ CRITICAL: Firebase Admin SDK initialization failed.', error.message);
-    // Fallback initialization for when the key is missing
-    admin.initializeApp();
+    admin.initializeApp(); // Fallback initialization
   }
 }
+
+const db = admin.firestore();
 
 // --- END: New Firebase Initialization ---
 
