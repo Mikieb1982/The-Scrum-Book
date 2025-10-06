@@ -1,9 +1,11 @@
 {
   "functions": { "source": "functions" },
-"hosting": {
-  "public": "the-turnstile-nextjs/out",
-  "rewrites": [
-    { "source": "/api/**", "function": "api" },
-    { "source": "**", "destination": "/index.html" }
-  ]
+  "hosting": {
+    "public": "the-turnstile-nextjs/out",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      { "source": "/api/**", "function": "api" },
+      { "source": "**", "destination": "/index.html" }
+    ]
+  }
 }
