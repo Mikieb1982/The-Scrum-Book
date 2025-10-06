@@ -1,21 +1,15 @@
 {
   "name": "turnstile-functions",
   "version": "1.0.0",
-  "description": "Cloud Functions for Firebase (Express API)",
+  "description": "Cloud Functions API for The Turnstile",
   "main": "lib/index.js",
   "type": "commonjs",
   "private": true,
-  "engines": {
-    "node": "20"
-  },
+  "engines": { "node": "20" },
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ext .ts src",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "test": "echo \"No tests specified\""
+    "deploy": "firebase deploy --only functions"
   },
   "dependencies": {
     "cors": "^2.8.5",
