@@ -77,16 +77,12 @@ export const LeagueTableView: React.FC = () => {
                     <RefreshIcon className="w-6 h-6"/>
                 </button>
             </div>
-            {dataSource && dataSource !== 'firestore' ? (
+            {dataSource === 'static' ? (
                 <div className="flex items-start gap-3 rounded-xl border border-amber-400/40 bg-amber-500/10 p-4 text-sm text-amber-100">
                     <AlertTriangleIcon className="mt-0.5 h-5 w-5 text-amber-200" />
                     <div className="space-y-1">
-                        <p className="font-semibold text-amber-100">Live standings unavailable</p>
-                        <p className="text-amber-100/80">
-                            {dataSource === 'api-mock'
-                                ? 'The API could not reach your Firestore leagueTable collection, so the built-in standings are shown instead.'
-                                : 'The league table endpoint is offline, so the bundled standings are being displayed. Start the API or update NEXT_PUBLIC_API_BASE_URL to see the latest data.'}
-                        </p>
+                        <p className="font-semibold text-amber-100">Using bundled standings snapshot</p>
+                        <p className="text-amber-100/80">The Turnstile now loads data directly from the published site, so league positions may lag behind live results until the JSON is updated.</p>
                     </div>
                 </div>
             ) : null}
