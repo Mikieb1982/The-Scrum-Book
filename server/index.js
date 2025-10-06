@@ -11,7 +11,7 @@ const SERVICE_ACCOUNT_FILE = 'the-scrum-book-firebase-adminsdk-your-file-name.js
 if (!admin.apps.length) {
   try {
     const serviceAccountPath = path.join(__dirname, SERVICE_ACCOUNT_FILE);
-    
+
     if (!fs.existsSync(serviceAccountPath)) {
       throw new Error(`Service account file not found at: ${serviceAccountPath}`);
     }
@@ -20,7 +20,8 @@ if (!admin.apps.length) {
     console.log(`✅ Initializing Firebase with service account: ${serviceAccount.project_id}`);
 
     admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount)
+      credential: admin.credential.cert(serviceAccount),
+      projectId: serviceAccount.project_id
     });
   } catch (error) {
     console.error('❌ CRITICAL: Firebase Admin SDK initialization failed.', error.message);
@@ -28,9 +29,11 @@ if (!admin.apps.length) {
   }
 }
 
-const db = admin.firestore();
-
-// --- END: New Firebase Initialization ---
+const firestoreProjectId =
+  admin.app().options?.projectId ||
+  process.env.GOOGLE_CLOUD_PROJECT ||
+  process.env.GCLOUD_PROJECT ||
+  process.env.FIREBASE_CONFIG?.projectId;
 
 const db = admin.firestore();
 
@@ -61,9 +64,13 @@ const respondWithMockData = (res, collection, error) => {
   } else {
     console.info(`Firestore not configured. Serving mock ${collection} data.`);
   }
-
   res.set('x-data-source', 'mock');
-  const payload = collection === 'matches' ? getMockMatches() : getMockLeagueTable();
+
+  const payload =
+    collection === 'matches'
+      ? { matches: getMockMatches() }
+      : { leagueTable: getMockLeagueTable() };
+
   res.status(200).json(payload);
 };
 
@@ -92,6 +99,15 @@ app.get('/', (req, res) => {
   res.send('Server is running');
 });
 
+app.get('/api/health', (_req, res) => {
+  res.json({
+    ok: true,
+    services: {
+      firestore: firestoreAvailable ? 'ok' : 'unavailable (serving mock data)'
+    }
+  });
+});
+
 app.get('/api/matches', async (req, res) => {
   await withFirestore(
     res,
@@ -100,7 +116,7 @@ app.get('/api/matches', async (req, res) => {
       const snapshot = await db.collection('matches').get();
       const matches = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
       res.set('x-data-source', 'firestore');
-      res.json(matches);
+      res.json({ matches });
     },
     (error) => respondWithMockData(res, 'matches', error)
   );
@@ -109,14 +125,14 @@ app.get('/api/matches', async (req, res) => {
 app.get('/api/league-table', async (req, res) => {
   await withFirestore(
     res,
-    'league table',
+    'leagueTable',
     async () => {
       const snapshot = await db.collection('leagueTable').get();
       const leagueTable = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
       res.set('x-data-source', 'firestore');
-      res.json(leagueTable);
+      res.json({ leagueTable });
     },
-    (error) => respondWithMockData(res, 'league table', error)
+    (error) => respondWithMockData(res, 'leagueTable', error)
   );
 });
 
