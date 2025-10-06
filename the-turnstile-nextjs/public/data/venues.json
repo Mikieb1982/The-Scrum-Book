@@ -1,0 +1,118 @@
+[
+  {
+    "name": "The Brick Community Stadium",
+    "team": "Wigan Warriors",
+    "lat": 53.547,
+    "lon": -2.651,
+    "x": 245,
+    "y": 300
+  },
+  {
+    "name": "Totally Wicked Stadium",
+    "team": "St Helens",
+    "lat": 53.453,
+    "lon": -2.729,
+    "x": 235,
+    "y": 310
+  },
+  {
+    "name": "Headingley",
+    "team": "Leeds Rhinos",
+    "lat": 53.816,
+    "lon": -1.583,
+    "x": 280,
+    "y": 285
+  },
+  {
+    "name": "Halliwell Jones Stadium",
+    "team": "Warrington Wolves",
+    "lat": 53.393,
+    "lon": -2.583,
+    "x": 250,
+    "y": 320
+  },
+  {
+    "name": "Stade Gilbert Brutus",
+    "team": "Catalans Dragons",
+    "lat": 42.716,
+    "lon": 2.894,
+    "x": 450,
+    "y": 750
+  },
+  {
+    "name": "John Smith's Stadium",
+    "team": "Huddersfield Giants",
+    "lat": 53.655,
+    "lon": -1.768,
+    "x": 275,
+    "y": 295
+  },
+  {
+    "name": "Sewell Group Craven Park",
+    "team": "Hull KR",
+    "lat": 53.75,
+    "lon": -0.298,
+    "x": 335,
+    "y": 280
+  },
+  {
+    "name": "MKM Stadium",
+    "team": "Hull FC",
+    "lat": 53.746,
+    "lon": -0.367,
+    "x": 330,
+    "y": 285
+  },
+  {
+    "name": "Salford Community Stadium",
+    "team": "Salford Red Devils",
+    "lat": 53.468,
+    "lon": -2.359,
+    "x": 255,
+    "y": 310
+  },
+  {
+    "name": "Leigh Sports Village",
+    "team": "Leigh Leopards",
+    "lat": 53.492,
+    "lon": -2.528,
+    "x": 240,
+    "y": 305
+  },
+  {
+    "name": "Mend-A-Hose Jungle",
+    "team": "Castleford Tigers",
+    "lat": 53.719,
+    "lon": -1.336,
+    "x": 290,
+    "y": 290
+  },
+  {
+    "name": "Cherry Red Records Stadium",
+    "team": "London Broncos",
+    "lat": 51.431,
+    "lon": -0.188,
+    "x": 320,
+    "y": 640
+  },
+  {
+    "name": "Belle Vue",
+    "team": "Wakefield Trinity",
+    "lat": 53.673,
+    "lon": -1.481,
+    "x": 285,
+    "y": 292
+  },
+  {
+    "name": "Old Trafford",
+    "team": "Neutral",
+    "lat": 53.4631,
+    "lon": -2.2913
+  },
+  {
+    "name": "St James' Park",
+    "team": "Neutral",
+    "lat": 54.9756,
+    "lon": -1.6218
+  }
+]

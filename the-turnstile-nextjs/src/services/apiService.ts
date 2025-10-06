@@ -1,84 +1,20 @@
+import { loadJSON } from "@/lib/data";
 import type { LeagueStanding, Match } from "@/types";
 
-import { mockMatches, mockLeagueTable } from "./mockData";
-
-export type ApiDataSource = 'firestore' | 'api-mock' | 'local-mock';
+export type ApiDataSource = "static";
 
 export interface ApiResult<T> {
   data: T;
   source: ApiDataSource;
 }
 
-export interface HealthStatus {
-  ok: boolean;
-  services?: Record<string, string>;
-}
-
-const normaliseBaseUrl = (value: string | undefined | null) => {
-  if (!value) {
-    return '';
-  }
-
-  const trimmed = value.trim();
-  return trimmed.replace(/\/$/, '');
+const withSource = async <T>(loader: Promise<T>): Promise<ApiResult<T>> => {
+  const data = await loader;
+  return { data, source: "static" };
 };
-
-const resolvedEnvBaseUrl = normaliseBaseUrl(process.env.NEXT_PUBLIC_API_BASE_URL);
-const API_BASE_URL = resolvedEnvBaseUrl || "/api";
-
-const isRelativeApi = API_BASE_URL === '/api';
-
-const logOfflineFallback = (collection: string, reason?: string) => {
-  const suffix = reason ? ` (${reason})` : "";
-  console.info(`Using local mock data for ${collection}.${suffix}`);
-};
-
-const resolveDataSourceFromHeaders = (response: Response): ApiDataSource => {
-  const header = response.headers.get('x-data-source');
-
-  if (header?.toLowerCase() === 'mock') {
-    return 'api-mock';
-  }
-
-  return 'firestore';
-};
-
-const fetchFromApi = async <T>(path: string, fallback: () => T, collection: string): Promise<ApiResult<T>> => {
-  try {
-    const response = await fetch(`${API_BASE_URL}${path}`);
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
-
-    const data = (await response.json()) as T;
-    const source = resolveDataSourceFromHeaders(response);
-
-    if (source === 'api-mock') {
-      logOfflineFallback(collection, 'Firestore unavailable');
-    }
-
-    return { data, source };
-  } catch (error) {
-    const reason = error instanceof Error ? error.message : undefined;
-    const isFetchError = reason ? reason.toLowerCase().includes('fetch') : false;
-    if (!isRelativeApi || !isFetchError) {
-      console.error(`Failed to fetch ${collection}:`, error);
-    }
-    logOfflineFallback(collection, isRelativeApi ? "internal API unavailable" : undefined);
-    return { data: fallback(), source: "local-mock" };
-  }
-};
-
-const fallbackHealthStatus: HealthStatus = {
-  ok: false,
-  services: { api: "offline" },
-};
-
-export const fetchHealthStatus = async (): Promise<ApiResult<HealthStatus>> =>
-  fetchFromApi<HealthStatus>("/health", () => fallbackHealthStatus, "health");
 
 export const fetchMatches = async (): Promise<ApiResult<Match[]>> =>
-  fetchFromApi<Match[]>("/matches", () => mockMatches, "matches");
+  withSource(loadJSON<Match[]>("/data/matches.json"));
 
 export const fetchLeagueTable = async (): Promise<ApiResult<LeagueStanding[]>> =>
-  fetchFromApi<LeagueStanding[]>("/league-table", () => mockLeagueTable, "league table");
+  withSource(loadJSON<LeagueStanding[]>("/data/league-table.json"));

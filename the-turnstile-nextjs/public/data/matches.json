@@ -1,0 +1,6320 @@
+[
+  {
+    "id": "mock-114",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "SCHEDULED",
+    "startTime": "2025-10-04T16:30:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "mock-115",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "winner-sf1",
+      "name": "TBC (Winner SF1)",
+      "logoUrl": ""
+    },
+    "awayTeam": {
+      "id": "winner-sf2",
+      "name": "TBC (Winner SF2)",
+      "logoUrl": ""
+    },
+    "status": "SCHEDULED",
+    "startTime": "2025-10-11T17:00:00.000Z",
+    "venue": "Old Trafford",
+    "scores": {
+      "home": 0,
+      "away": 0
+    }
+  },
+  {
+    "id": "mock-2000",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-10-03T12:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 18,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 45
+      },
+      "territory": {
+        "home": 49,
+        "away": 48
+      },
+      "tackles": {
+        "home": 348,
+        "away": 319
+      }
+    }
+  },
+  {
+    "id": "mock-2001",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-27T14:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 14,
+      "away": 16
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 45
+      },
+      "territory": {
+        "home": 49,
+        "away": 52
+      },
+      "tackles": {
+        "home": 341,
+        "away": 326
+      }
+    }
+  },
+  {
+    "id": "mock-2002",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-26T16:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 26,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 48
+      },
+      "territory": {
+        "home": 54,
+        "away": 46
+      },
+      "tackles": {
+        "home": 336,
+        "away": 328
+      }
+    }
+  },
+  {
+    "id": "mock-2003",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-19T18:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 30,
+      "away": 16
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 50
+      },
+      "territory": {
+        "home": 49,
+        "away": 48
+      },
+      "tackles": {
+        "home": 338,
+        "away": 339
+      }
+    }
+  },
+  {
+    "id": "mock-2004",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-19T12:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 26,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 52
+      },
+      "territory": {
+        "home": 45,
+        "away": 54
+      },
+      "tackles": {
+        "home": 327,
+        "away": 329
+      }
+    }
+  },
+  {
+    "id": "mock-2005",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-19T14:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 16,
+      "away": 52
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 54
+      },
+      "territory": {
+        "home": 46,
+        "away": 51
+      },
+      "tackles": {
+        "home": 333,
+        "away": 322
+      }
+    }
+  },
+  {
+    "id": "mock-2006",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-19T16:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 22,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 49
+      },
+      "territory": {
+        "home": 46,
+        "away": 53
+      },
+      "tackles": {
+        "home": 332,
+        "away": 317
+      }
+    }
+  },
+  {
+    "id": "mock-2007",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-18T18:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 22,
+      "away": 26
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 52
+      },
+      "territory": {
+        "home": 47,
+        "away": 51
+      },
+      "tackles": {
+        "home": 343,
+        "away": 310
+      }
+    }
+  },
+  {
+    "id": "mock-2008",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-18T12:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 28,
+      "away": 20
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 53
+      },
+      "territory": {
+        "home": 51,
+        "away": 45
+      },
+      "tackles": {
+        "home": 318,
+        "away": 335
+      }
+    }
+  },
+  {
+    "id": "mock-2009",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-14T14:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 22,
+      "away": 8
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 50
+      },
+      "territory": {
+        "home": 54,
+        "away": 47
+      },
+      "tackles": {
+        "home": 321,
+        "away": 322
+      }
+    }
+  },
+  {
+    "id": "mock-2010",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-13T16:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 28,
+      "away": 12
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 54
+      },
+      "territory": {
+        "home": 49,
+        "away": 47
+      },
+      "tackles": {
+        "home": 305,
+        "away": 323
+      }
+    }
+  },
+  {
+    "id": "mock-2011",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-13T18:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 34,
+      "away": 2
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 53
+      },
+      "territory": {
+        "home": 53,
+        "away": 50
+      },
+      "tackles": {
+        "home": 338,
+        "away": 330
+      }
+    }
+  },
+  {
+    "id": "mock-2012",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-12T12:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 28,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 48
+      },
+      "territory": {
+        "home": 54,
+        "away": 53
+      },
+      "tackles": {
+        "home": 318,
+        "away": 309
+      }
+    }
+  },
+  {
+    "id": "mock-2013",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-12T14:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 62,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 54
+      },
+      "territory": {
+        "home": 50,
+        "away": 53
+      },
+      "tackles": {
+        "home": 335,
+        "away": 310
+      }
+    }
+  },
+  {
+    "id": "mock-2014",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-11T16:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 8,
+      "away": 16
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 54
+      },
+      "territory": {
+        "home": 52,
+        "away": 52
+      },
+      "tackles": {
+        "home": 314,
+        "away": 305
+      }
+    }
+  },
+  {
+    "id": "mock-2015",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-07T18:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 18,
+      "away": 4
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 49
+      },
+      "territory": {
+        "home": 54,
+        "away": 54
+      },
+      "tackles": {
+        "home": 317,
+        "away": 318
+      }
+    }
+  },
+  {
+    "id": "mock-2016",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-06T12:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 12,
+      "away": 34
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 50
+      },
+      "territory": {
+        "home": 51,
+        "away": 49
+      },
+      "tackles": {
+        "home": 305,
+        "away": 311
+      }
+    }
+  },
+  {
+    "id": "mock-2017",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-05T14:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 4,
+      "away": 18
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 47
+      },
+      "territory": {
+        "home": 54,
+        "away": 49
+      },
+      "tackles": {
+        "home": 341,
+        "away": 338
+      }
+    }
+  },
+  {
+    "id": "mock-2018",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-05T16:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 26,
+      "away": 22
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 52
+      },
+      "territory": {
+        "home": 51,
+        "away": 54
+      },
+      "tackles": {
+        "home": 320,
+        "away": 303
+      }
+    }
+  },
+  {
+    "id": "mock-2019",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-04T18:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 16,
+      "away": 17
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 49
+      },
+      "territory": {
+        "home": 53,
+        "away": 48
+      },
+      "tackles": {
+        "home": 305,
+        "away": 333
+      }
+    }
+  },
+  {
+    "id": "mock-2020",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-09-04T12:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 0,
+      "away": 26
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 51
+      },
+      "territory": {
+        "home": 48,
+        "away": 51
+      },
+      "tackles": {
+        "home": 343,
+        "away": 313
+      }
+    }
+  },
+  {
+    "id": "mock-2021",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-30T14:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 4,
+      "away": 40
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 53
+      },
+      "territory": {
+        "home": 49,
+        "away": 52
+      },
+      "tackles": {
+        "home": 316,
+        "away": 316
+      }
+    }
+  },
+  {
+    "id": "mock-2022",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-30T16:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 48,
+      "away": 2
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 50
+      },
+      "territory": {
+        "home": 48,
+        "away": 49
+      },
+      "tackles": {
+        "home": 324,
+        "away": 330
+      }
+    }
+  },
+  {
+    "id": "mock-2023",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-30T18:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 0,
+      "away": 34
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 45
+      },
+      "territory": {
+        "home": 53,
+        "away": 51
+      },
+      "tackles": {
+        "home": 348,
+        "away": 304
+      }
+    }
+  },
+  {
+    "id": "mock-2024",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-29T12:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 12,
+      "away": 25
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 48
+      },
+      "territory": {
+        "home": 54,
+        "away": 51
+      },
+      "tackles": {
+        "home": 332,
+        "away": 329
+      }
+    }
+  },
+  {
+    "id": "mock-2025",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-29T14:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 12,
+      "away": 8
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 50
+      },
+      "territory": {
+        "home": 51,
+        "away": 47
+      },
+      "tackles": {
+        "home": 320,
+        "away": 333
+      }
+    }
+  },
+  {
+    "id": "mock-2026",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-28T16:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 46,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 54
+      },
+      "territory": {
+        "home": 46,
+        "away": 52
+      },
+      "tackles": {
+        "home": 337,
+        "away": 312
+      }
+    }
+  },
+  {
+    "id": "mock-2027",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-24T18:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 23,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 54
+      },
+      "territory": {
+        "home": 46,
+        "away": 47
+      },
+      "tackles": {
+        "home": 310,
+        "away": 338
+      }
+    }
+  },
+  {
+    "id": "mock-2028",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-24T12:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 44,
+      "away": 2
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 52
+      },
+      "territory": {
+        "home": 53,
+        "away": 51
+      },
+      "tackles": {
+        "home": 301,
+        "away": 334
+      }
+    }
+  },
+  {
+    "id": "mock-2029",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-23T14:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 38,
+      "away": 4
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 54
+      },
+      "territory": {
+        "home": 47,
+        "away": 49
+      },
+      "tackles": {
+        "home": 302,
+        "away": 326
+      }
+    }
+  },
+  {
+    "id": "mock-2030",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-22T16:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 38,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 46
+      },
+      "territory": {
+        "home": 45,
+        "away": 45
+      },
+      "tackles": {
+        "home": 314,
+        "away": 312
+      }
+    }
+  },
+  {
+    "id": "mock-2031",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-22T18:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 16,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 49
+      },
+      "territory": {
+        "home": 47,
+        "away": 49
+      },
+      "tackles": {
+        "home": 317,
+        "away": 320
+      }
+    }
+  },
+  {
+    "id": "mock-2032",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-21T12:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 28,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 53
+      },
+      "territory": {
+        "home": 54,
+        "away": 50
+      },
+      "tackles": {
+        "home": 336,
+        "away": 334
+      }
+    }
+  },
+  {
+    "id": "mock-2033",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-17T14:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 0,
+      "away": 48
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 54
+      },
+      "territory": {
+        "home": 48,
+        "away": 52
+      },
+      "tackles": {
+        "home": 319,
+        "away": 311
+      }
+    }
+  },
+  {
+    "id": "mock-2034",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-17T16:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 52,
+      "away": 4
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 49
+      },
+      "territory": {
+        "home": 50,
+        "away": 46
+      },
+      "tackles": {
+        "home": 302,
+        "away": 349
+      }
+    }
+  },
+  {
+    "id": "mock-2035",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-16T18:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 18,
+      "away": 12
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 53
+      },
+      "territory": {
+        "home": 47,
+        "away": 45
+      },
+      "tackles": {
+        "home": 332,
+        "away": 343
+      }
+    }
+  },
+  {
+    "id": "mock-2036",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-16T12:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 6,
+      "away": 64
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 51
+      },
+      "territory": {
+        "home": 47,
+        "away": 52
+      },
+      "tackles": {
+        "home": 332,
+        "away": 348
+      }
+    }
+  },
+  {
+    "id": "mock-2037",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-15T14:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 6,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 46
+      },
+      "territory": {
+        "home": 49,
+        "away": 46
+      },
+      "tackles": {
+        "home": 315,
+        "away": 341
+      }
+    }
+  },
+  {
+    "id": "mock-2038",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-14T16:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 30,
+      "away": 22
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 53
+      },
+      "territory": {
+        "home": 49,
+        "away": 46
+      },
+      "tackles": {
+        "home": 332,
+        "away": 345
+      }
+    }
+  },
+  {
+    "id": "mock-2039",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-10T18:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 80,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 48
+      },
+      "territory": {
+        "home": 53,
+        "away": 45
+      },
+      "tackles": {
+        "home": 309,
+        "away": 317
+      }
+    }
+  },
+  {
+    "id": "mock-2040",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-09T12:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 18,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 46
+      },
+      "territory": {
+        "home": 48,
+        "away": 53
+      },
+      "tackles": {
+        "home": 336,
+        "away": 342
+      }
+    }
+  },
+  {
+    "id": "mock-2041",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-09T14:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 36,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 50
+      },
+      "territory": {
+        "home": 50,
+        "away": 51
+      },
+      "tackles": {
+        "home": 335,
+        "away": 331
+      }
+    }
+  },
+  {
+    "id": "mock-2042",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-08T16:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 4,
+      "away": 34
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 47
+      },
+      "territory": {
+        "home": 45,
+        "away": 45
+      },
+      "tackles": {
+        "home": 313,
+        "away": 325
+      }
+    }
+  },
+  {
+    "id": "mock-2043",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-08T18:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 18,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 49
+      },
+      "territory": {
+        "home": 47,
+        "away": 52
+      },
+      "tackles": {
+        "home": 302,
+        "away": 317
+      }
+    }
+  },
+  {
+    "id": "mock-2044",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-07T12:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 14,
+      "away": 22
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 50
+      },
+      "territory": {
+        "home": 46,
+        "away": 49
+      },
+      "tackles": {
+        "home": 326,
+        "away": 336
+      }
+    }
+  },
+  {
+    "id": "mock-2045",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-01T14:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 40,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 48
+      },
+      "territory": {
+        "home": 51,
+        "away": 52
+      },
+      "tackles": {
+        "home": 305,
+        "away": 300
+      }
+    }
+  },
+  {
+    "id": "mock-2046",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-08-01T16:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 20,
+      "away": 16
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 54
+      },
+      "territory": {
+        "home": 50,
+        "away": 51
+      },
+      "tackles": {
+        "home": 310,
+        "away": 342
+      }
+    }
+  },
+  {
+    "id": "mock-2047",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-31T18:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 12,
+      "away": 74
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 51
+      },
+      "territory": {
+        "home": 45,
+        "away": 54
+      },
+      "tackles": {
+        "home": 302,
+        "away": 300
+      }
+    }
+  },
+  {
+    "id": "mock-2048",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-26T12:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 14,
+      "away": 30
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 54
+      },
+      "territory": {
+        "home": 45,
+        "away": 49
+      },
+      "tackles": {
+        "home": 300,
+        "away": 317
+      }
+    }
+  },
+  {
+    "id": "mock-2049",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-25T14:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 28,
+      "away": 18
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 45
+      },
+      "territory": {
+        "home": 53,
+        "away": 46
+      },
+      "tackles": {
+        "home": 315,
+        "away": 346
+      }
+    }
+  },
+  {
+    "id": "mock-2050",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-24T16:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 15,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 47
+      },
+      "territory": {
+        "home": 52,
+        "away": 54
+      },
+      "tackles": {
+        "home": 344,
+        "away": 328
+      }
+    }
+  },
+  {
+    "id": "mock-2051",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-20T18:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 20,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 52
+      },
+      "territory": {
+        "home": 53,
+        "away": 48
+      },
+      "tackles": {
+        "home": 344,
+        "away": 345
+      }
+    }
+  },
+  {
+    "id": "mock-2052",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-19T12:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 6,
+      "away": 34
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 51
+      },
+      "territory": {
+        "home": 50,
+        "away": 52
+      },
+      "tackles": {
+        "home": 311,
+        "away": 318
+      }
+    }
+  },
+  {
+    "id": "mock-2053",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-19T14:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 12,
+      "away": 32
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 47
+      },
+      "territory": {
+        "home": 52,
+        "away": 53
+      },
+      "tackles": {
+        "home": 315,
+        "away": 302
+      }
+    }
+  },
+  {
+    "id": "mock-2054",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-18T16:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 10,
+      "away": 46
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 46
+      },
+      "territory": {
+        "home": 52,
+        "away": 50
+      },
+      "tackles": {
+        "home": 323,
+        "away": 339
+      }
+    }
+  },
+  {
+    "id": "mock-2055",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-18T18:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 42,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 45
+      },
+      "territory": {
+        "home": 51,
+        "away": 50
+      },
+      "tackles": {
+        "home": 318,
+        "away": 315
+      }
+    }
+  },
+  {
+    "id": "mock-2056",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-17T12:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 4,
+      "away": 16
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 48
+      },
+      "territory": {
+        "home": 48,
+        "away": 45
+      },
+      "tackles": {
+        "home": 301,
+        "away": 332
+      }
+    }
+  },
+  {
+    "id": "mock-2057",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-13T14:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 26,
+      "away": 22
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 45
+      },
+      "territory": {
+        "home": 54,
+        "away": 49
+      },
+      "tackles": {
+        "home": 317,
+        "away": 344
+      }
+    }
+  },
+  {
+    "id": "mock-2058",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-12T16:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 20,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 51
+      },
+      "territory": {
+        "home": 48,
+        "away": 46
+      },
+      "tackles": {
+        "home": 304,
+        "away": 310
+      }
+    }
+  },
+  {
+    "id": "mock-2059",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-12T18:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 28,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 48
+      },
+      "territory": {
+        "home": 50,
+        "away": 47
+      },
+      "tackles": {
+        "home": 313,
+        "away": 321
+      }
+    }
+  },
+  {
+    "id": "mock-2060",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-11T12:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 30,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 47
+      },
+      "territory": {
+        "home": 46,
+        "away": 51
+      },
+      "tackles": {
+        "home": 307,
+        "away": 318
+      }
+    }
+  },
+  {
+    "id": "mock-2061",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-11T14:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 0,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 52
+      },
+      "territory": {
+        "home": 54,
+        "away": 49
+      },
+      "tackles": {
+        "home": 337,
+        "away": 313
+      }
+    }
+  },
+  {
+    "id": "mock-2062",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-10T16:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 16,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 46
+      },
+      "territory": {
+        "home": 54,
+        "away": 49
+      },
+      "tackles": {
+        "home": 318,
+        "away": 342
+      }
+    }
+  },
+  {
+    "id": "mock-2063",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-06T18:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 8,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 51
+      },
+      "territory": {
+        "home": 46,
+        "away": 52
+      },
+      "tackles": {
+        "home": 307,
+        "away": 330
+      }
+    }
+  },
+  {
+    "id": "mock-2064",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-05T12:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 44,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 49
+      },
+      "territory": {
+        "home": 49,
+        "away": 51
+      },
+      "tackles": {
+        "home": 340,
+        "away": 307
+      }
+    }
+  },
+  {
+    "id": "mock-2065",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-05T14:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 6,
+      "away": 13
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 51
+      },
+      "territory": {
+        "home": 53,
+        "away": 52
+      },
+      "tackles": {
+        "home": 338,
+        "away": 316
+      }
+    }
+  },
+  {
+    "id": "mock-2066",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-04T16:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 12,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 49
+      },
+      "territory": {
+        "home": 51,
+        "away": 53
+      },
+      "tackles": {
+        "home": 301,
+        "away": 309
+      }
+    }
+  },
+  {
+    "id": "mock-2067",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-04T18:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 18,
+      "away": 8
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 45
+      },
+      "territory": {
+        "home": 51,
+        "away": 46
+      },
+      "tackles": {
+        "home": 302,
+        "away": 307
+      }
+    }
+  },
+  {
+    "id": "mock-2068",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-07-03T12:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 12,
+      "away": 30
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 51
+      },
+      "territory": {
+        "home": 48,
+        "away": 49
+      },
+      "tackles": {
+        "home": 300,
+        "away": 313
+      }
+    }
+  },
+  {
+    "id": "mock-2069",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-29T14:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 58,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 53
+      },
+      "territory": {
+        "home": 51,
+        "away": 51
+      },
+      "tackles": {
+        "home": 339,
+        "away": 319
+      }
+    }
+  },
+  {
+    "id": "mock-2070",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-28T16:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 20,
+      "away": 26
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 54
+      },
+      "territory": {
+        "home": 52,
+        "away": 53
+      },
+      "tackles": {
+        "home": 326,
+        "away": 309
+      }
+    }
+  },
+  {
+    "id": "mock-2071",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-28T18:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 32,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 49
+      },
+      "territory": {
+        "home": 49,
+        "away": 49
+      },
+      "tackles": {
+        "home": 336,
+        "away": 318
+      }
+    }
+  },
+  {
+    "id": "mock-2072",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-28T12:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 24,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 52
+      },
+      "territory": {
+        "home": 48,
+        "away": 48
+      },
+      "tackles": {
+        "home": 330,
+        "away": 307
+      }
+    }
+  },
+  {
+    "id": "mock-2073",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-27T14:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 48,
+      "away": 30
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 48
+      },
+      "territory": {
+        "home": 54,
+        "away": 46
+      },
+      "tackles": {
+        "home": 329,
+        "away": 345
+      }
+    }
+  },
+  {
+    "id": "mock-2074",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-27T16:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 34,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 45
+      },
+      "territory": {
+        "home": 54,
+        "away": 50
+      },
+      "tackles": {
+        "home": 316,
+        "away": 309
+      }
+    }
+  },
+  {
+    "id": "mock-2075",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-22T18:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 6,
+      "away": 38
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 49
+      },
+      "territory": {
+        "home": 49,
+        "away": 50
+      },
+      "tackles": {
+        "home": 314,
+        "away": 316
+      }
+    }
+  },
+  {
+    "id": "mock-2076",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-21T12:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 12,
+      "away": 26
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 45
+      },
+      "territory": {
+        "home": 47,
+        "away": 52
+      },
+      "tackles": {
+        "home": 330,
+        "away": 310
+      }
+    }
+  },
+  {
+    "id": "mock-2077",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-21T14:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 16,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 54
+      },
+      "territory": {
+        "home": 53,
+        "away": 51
+      },
+      "tackles": {
+        "home": 342,
+        "away": 340
+      }
+    }
+  },
+  {
+    "id": "mock-2078",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-20T16:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 18,
+      "away": 4
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 53
+      },
+      "territory": {
+        "home": 51,
+        "away": 46
+      },
+      "tackles": {
+        "home": 318,
+        "away": 325
+      }
+    }
+  },
+  {
+    "id": "mock-2079",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-20T18:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 16,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 52
+      },
+      "territory": {
+        "home": 50,
+        "away": 47
+      },
+      "tackles": {
+        "home": 309,
+        "away": 345
+      }
+    }
+  },
+  {
+    "id": "mock-2080",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-19T12:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 0,
+      "away": 48
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 52
+      },
+      "territory": {
+        "home": 52,
+        "away": 51
+      },
+      "tackles": {
+        "home": 327,
+        "away": 323
+      }
+    }
+  },
+  {
+    "id": "mock-2081",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-15T14:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 4,
+      "away": 46
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 47
+      },
+      "territory": {
+        "home": 54,
+        "away": 51
+      },
+      "tackles": {
+        "home": 333,
+        "away": 314
+      }
+    }
+  },
+  {
+    "id": "mock-2082",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-15T16:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 20,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 54
+      },
+      "territory": {
+        "home": 51,
+        "away": 47
+      },
+      "tackles": {
+        "home": 348,
+        "away": 340
+      }
+    }
+  },
+  {
+    "id": "mock-2083",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-14T18:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 36,
+      "away": 12
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 54
+      },
+      "territory": {
+        "home": 45,
+        "away": 54
+      },
+      "tackles": {
+        "home": 315,
+        "away": 346
+      }
+    }
+  },
+  {
+    "id": "mock-2084",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-14T12:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 18,
+      "away": 22
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 51
+      },
+      "territory": {
+        "home": 48,
+        "away": 46
+      },
+      "tackles": {
+        "home": 342,
+        "away": 307
+      }
+    }
+  },
+  {
+    "id": "mock-2085",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-13T14:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 68,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 53
+      },
+      "territory": {
+        "home": 52,
+        "away": 46
+      },
+      "tackles": {
+        "home": 318,
+        "away": 332
+      }
+    }
+  },
+  {
+    "id": "mock-2086",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-06-13T16:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 14,
+      "away": 22
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 54
+      },
+      "territory": {
+        "home": 53,
+        "away": 54
+      },
+      "tackles": {
+        "home": 323,
+        "away": 328
+      }
+    }
+  },
+  {
+    "id": "mock-2087",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-31T18:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 0,
+      "away": 34
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 52
+      },
+      "territory": {
+        "home": 52,
+        "away": 49
+      },
+      "tackles": {
+        "home": 346,
+        "away": 300
+      }
+    }
+  },
+  {
+    "id": "mock-2088",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-31T12:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 22,
+      "away": 18
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 45
+      },
+      "territory": {
+        "home": 45,
+        "away": 47
+      },
+      "tackles": {
+        "home": 341,
+        "away": 326
+      }
+    }
+  },
+  {
+    "id": "mock-2089",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-30T14:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 34,
+      "away": 4
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 47
+      },
+      "territory": {
+        "home": 52,
+        "away": 54
+      },
+      "tackles": {
+        "home": 349,
+        "away": 340
+      }
+    }
+  },
+  {
+    "id": "mock-2090",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-30T16:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 6,
+      "away": 46
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 47
+      },
+      "territory": {
+        "home": 53,
+        "away": 53
+      },
+      "tackles": {
+        "home": 325,
+        "away": 329
+      }
+    }
+  },
+  {
+    "id": "mock-2091",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-30T18:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 34,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 46
+      },
+      "territory": {
+        "home": 54,
+        "away": 48
+      },
+      "tackles": {
+        "home": 330,
+        "away": 305
+      }
+    }
+  },
+  {
+    "id": "mock-2092",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-29T12:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 24,
+      "away": 28
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 45
+      },
+      "territory": {
+        "home": 52,
+        "away": 51
+      },
+      "tackles": {
+        "home": 346,
+        "away": 334
+      }
+    }
+  },
+  {
+    "id": "mock-2093",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-25T14:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 72,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 49
+      },
+      "territory": {
+        "home": 49,
+        "away": 47
+      },
+      "tackles": {
+        "home": 304,
+        "away": 321
+      }
+    }
+  },
+  {
+    "id": "mock-2094",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-24T16:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 0,
+      "away": 48
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 46
+      },
+      "territory": {
+        "home": 54,
+        "away": 48
+      },
+      "tackles": {
+        "home": 302,
+        "away": 321
+      }
+    }
+  },
+  {
+    "id": "mock-2095",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-24T18:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 6,
+      "away": 29
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 52
+      },
+      "territory": {
+        "home": 45,
+        "away": 54
+      },
+      "tackles": {
+        "home": 320,
+        "away": 322
+      }
+    }
+  },
+  {
+    "id": "mock-2096",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-23T12:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 12,
+      "away": 31
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 45
+      },
+      "territory": {
+        "home": 52,
+        "away": 49
+      },
+      "tackles": {
+        "home": 315,
+        "away": 344
+      }
+    }
+  },
+  {
+    "id": "mock-2097",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-23T14:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 4,
+      "away": 46
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 46
+      },
+      "territory": {
+        "home": 48,
+        "away": 47
+      },
+      "tackles": {
+        "home": 309,
+        "away": 317
+      }
+    }
+  },
+  {
+    "id": "mock-2098",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-22T16:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 12,
+      "away": 26
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 47
+      },
+      "territory": {
+        "home": 45,
+        "away": 52
+      },
+      "tackles": {
+        "home": 328,
+        "away": 314
+      }
+    }
+  },
+  {
+    "id": "mock-2099",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-18T18:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 48,
+      "away": 16
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 47
+      },
+      "territory": {
+        "home": 52,
+        "away": 54
+      },
+      "tackles": {
+        "home": 318,
+        "away": 330
+      }
+    }
+  },
+  {
+    "id": "mock-2100",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-18T12:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 40,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 48
+      },
+      "territory": {
+        "home": 45,
+        "away": 53
+      },
+      "tackles": {
+        "home": 338,
+        "away": 301
+      }
+    }
+  },
+  {
+    "id": "mock-2101",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-17T14:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 34,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 54
+      },
+      "territory": {
+        "home": 49,
+        "away": 46
+      },
+      "tackles": {
+        "home": 333,
+        "away": 303
+      }
+    }
+  },
+  {
+    "id": "mock-2102",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-16T16:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 36,
+      "away": 28
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 52
+      },
+      "territory": {
+        "home": 46,
+        "away": 50
+      },
+      "tackles": {
+        "home": 343,
+        "away": 327
+      }
+    }
+  },
+  {
+    "id": "mock-2103",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-16T18:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 18,
+      "away": 16
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 49
+      },
+      "territory": {
+        "home": 48,
+        "away": 49
+      },
+      "tackles": {
+        "home": 344,
+        "away": 328
+      }
+    }
+  },
+  {
+    "id": "mock-2104",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-15T12:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 40,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 54
+      },
+      "territory": {
+        "home": 46,
+        "away": 53
+      },
+      "tackles": {
+        "home": 332,
+        "away": 349
+      }
+    }
+  },
+  {
+    "id": "mock-2105",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-04T14:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 8,
+      "away": 32
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 47
+      },
+      "territory": {
+        "home": 48,
+        "away": 50
+      },
+      "tackles": {
+        "home": 321,
+        "away": 344
+      }
+    }
+  },
+  {
+    "id": "mock-2106",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-04T16:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 22,
+      "away": 20
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 45
+      },
+      "territory": {
+        "home": 53,
+        "away": 46
+      },
+      "tackles": {
+        "home": 324,
+        "away": 311
+      }
+    }
+  },
+  {
+    "id": "mock-2107",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-04T18:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 12,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 52
+      },
+      "territory": {
+        "home": 51,
+        "away": 45
+      },
+      "tackles": {
+        "home": 316,
+        "away": 301
+      }
+    }
+  },
+  {
+    "id": "mock-2108",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-03T12:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 4,
+      "away": 17
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 46
+      },
+      "territory": {
+        "home": 46,
+        "away": 45
+      },
+      "tackles": {
+        "home": 342,
+        "away": 315
+      }
+    }
+  },
+  {
+    "id": "mock-2109",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-03T14:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 54,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 50
+      },
+      "territory": {
+        "home": 48,
+        "away": 46
+      },
+      "tackles": {
+        "home": 318,
+        "away": 316
+      }
+    }
+  },
+  {
+    "id": "mock-2110",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-05-03T16:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 26,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 52
+      },
+      "territory": {
+        "home": 53,
+        "away": 53
+      },
+      "tackles": {
+        "home": 345,
+        "away": 322
+      }
+    }
+  },
+  {
+    "id": "mock-2111",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-27T18:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 12,
+      "away": 36
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 48
+      },
+      "territory": {
+        "home": 46,
+        "away": 50
+      },
+      "tackles": {
+        "home": 329,
+        "away": 347
+      }
+    }
+  },
+  {
+    "id": "mock-2112",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-26T12:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 6,
+      "away": 28
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 49
+      },
+      "territory": {
+        "home": 48,
+        "away": 47
+      },
+      "tackles": {
+        "home": 337,
+        "away": 333
+      }
+    }
+  },
+  {
+    "id": "mock-2113",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-26T14:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 24,
+      "away": 20
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 51
+      },
+      "territory": {
+        "home": 48,
+        "away": 51
+      },
+      "tackles": {
+        "home": 339,
+        "away": 330
+      }
+    }
+  },
+  {
+    "id": "mock-2114",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-26T16:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 12,
+      "away": 30
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 52
+      },
+      "territory": {
+        "home": 47,
+        "away": 46
+      },
+      "tackles": {
+        "home": 303,
+        "away": 348
+      }
+    }
+  },
+  {
+    "id": "mock-2115",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-25T18:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 14,
+      "away": 20
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 46
+      },
+      "territory": {
+        "home": 47,
+        "away": 52
+      },
+      "tackles": {
+        "home": 325,
+        "away": 328
+      }
+    }
+  },
+  {
+    "id": "mock-2116",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-24T12:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 32,
+      "away": 18
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 53
+      },
+      "territory": {
+        "home": 53,
+        "away": 46
+      },
+      "tackles": {
+        "home": 333,
+        "away": 323
+      }
+    }
+  },
+  {
+    "id": "mock-2117",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-19T14:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 38,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 52
+      },
+      "territory": {
+        "home": 54,
+        "away": 51
+      },
+      "tackles": {
+        "home": 330,
+        "away": 323
+      }
+    }
+  },
+  {
+    "id": "mock-2118",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-19T16:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 18,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 45
+      },
+      "territory": {
+        "home": 45,
+        "away": 50
+      },
+      "tackles": {
+        "home": 302,
+        "away": 310
+      }
+    }
+  },
+  {
+    "id": "mock-2119",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-18T18:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 28,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 47
+      },
+      "territory": {
+        "home": 53,
+        "away": 52
+      },
+      "tackles": {
+        "home": 330,
+        "away": 301
+      }
+    }
+  },
+  {
+    "id": "mock-2120",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-18T12:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 24,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 47
+      },
+      "territory": {
+        "home": 48,
+        "away": 45
+      },
+      "tackles": {
+        "home": 327,
+        "away": 309
+      }
+    }
+  },
+  {
+    "id": "mock-2121",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-18T14:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 14,
+      "away": 28
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 45
+      },
+      "territory": {
+        "home": 46,
+        "away": 52
+      },
+      "tackles": {
+        "home": 302,
+        "away": 327
+      }
+    }
+  },
+  {
+    "id": "mock-2122",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-17T16:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 13,
+      "away": 12
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 50
+      },
+      "territory": {
+        "home": 48,
+        "away": 54
+      },
+      "tackles": {
+        "home": 347,
+        "away": 323
+      }
+    }
+  },
+  {
+    "id": "mock-2123",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-13T18:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 18,
+      "away": 38
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 45
+      },
+      "territory": {
+        "home": 52,
+        "away": 48
+      },
+      "tackles": {
+        "home": 341,
+        "away": 326
+      }
+    }
+  },
+  {
+    "id": "mock-2124",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-12T12:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 6,
+      "away": 20
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 51
+      },
+      "territory": {
+        "home": 50,
+        "away": 49
+      },
+      "tackles": {
+        "home": 324,
+        "away": 334
+      }
+    }
+  },
+  {
+    "id": "mock-2125",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-12T14:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 16,
+      "away": 28
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 50
+      },
+      "territory": {
+        "home": 46,
+        "away": 48
+      },
+      "tackles": {
+        "home": 333,
+        "away": 328
+      }
+    }
+  },
+  {
+    "id": "mock-2126",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-11T16:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 12,
+      "away": 28
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 54
+      },
+      "territory": {
+        "home": 51,
+        "away": 54
+      },
+      "tackles": {
+        "home": 323,
+        "away": 315
+      }
+    }
+  },
+  {
+    "id": "mock-2127",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-11T18:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 26,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 48
+      },
+      "territory": {
+        "home": 47,
+        "away": 49
+      },
+      "tackles": {
+        "home": 305,
+        "away": 300
+      }
+    }
+  },
+  {
+    "id": "mock-2128",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-04-10T12:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 0,
+      "away": 28
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 47
+      },
+      "territory": {
+        "home": 48,
+        "away": 45
+      },
+      "tackles": {
+        "home": 303,
+        "away": 302
+      }
+    }
+  },
+  {
+    "id": "mock-2129",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-30T14:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 54,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 53
+      },
+      "territory": {
+        "home": 54,
+        "away": 49
+      },
+      "tackles": {
+        "home": 323,
+        "away": 308
+      }
+    }
+  },
+  {
+    "id": "mock-2130",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-30T16:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 4,
+      "away": 50
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 46
+      },
+      "territory": {
+        "home": 48,
+        "away": 47
+      },
+      "tackles": {
+        "home": 304,
+        "away": 348
+      }
+    }
+  },
+  {
+    "id": "mock-2131",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-29T18:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 13,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 54
+      },
+      "territory": {
+        "home": 45,
+        "away": 53
+      },
+      "tackles": {
+        "home": 317,
+        "away": 337
+      }
+    }
+  },
+  {
+    "id": "mock-2132",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-28T12:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 16,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 50
+      },
+      "territory": {
+        "home": 48,
+        "away": 49
+      },
+      "tackles": {
+        "home": 348,
+        "away": 324
+      }
+    }
+  },
+  {
+    "id": "mock-2133",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-28T14:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 14,
+      "away": 40
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 47
+      },
+      "territory": {
+        "home": 48,
+        "away": 48
+      },
+      "tackles": {
+        "home": 313,
+        "away": 336
+      }
+    }
+  },
+  {
+    "id": "mock-2134",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-27T16:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 14,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 50
+      },
+      "territory": {
+        "home": 51,
+        "away": 46
+      },
+      "tackles": {
+        "home": 315,
+        "away": 346
+      }
+    }
+  },
+  {
+    "id": "mock-2135",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-23T18:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 30,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 46
+      },
+      "territory": {
+        "home": 49,
+        "away": 52
+      },
+      "tackles": {
+        "home": 334,
+        "away": 343
+      }
+    }
+  },
+  {
+    "id": "mock-2136",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-22T12:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 12,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 45
+      },
+      "territory": {
+        "home": 47,
+        "away": 48
+      },
+      "tackles": {
+        "home": 337,
+        "away": 348
+      }
+    }
+  },
+  {
+    "id": "mock-2137",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-22T14:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 4,
+      "away": 26
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 46
+      },
+      "territory": {
+        "home": 46,
+        "away": 52
+      },
+      "tackles": {
+        "home": 349,
+        "away": 320
+      }
+    }
+  },
+  {
+    "id": "mock-2138",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-21T16:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 12,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 51
+      },
+      "territory": {
+        "home": 50,
+        "away": 48
+      },
+      "tackles": {
+        "home": 319,
+        "away": 343
+      }
+    }
+  },
+  {
+    "id": "mock-2139",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-21T18:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 12,
+      "away": 16
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 46
+      },
+      "territory": {
+        "home": 47,
+        "away": 50
+      },
+      "tackles": {
+        "home": 340,
+        "away": 333
+      }
+    }
+  },
+  {
+    "id": "mock-2140",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-20T12:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 23,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 54
+      },
+      "territory": {
+        "home": 53,
+        "away": 52
+      },
+      "tackles": {
+        "home": 316,
+        "away": 300
+      }
+    }
+  },
+  {
+    "id": "mock-2141",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-09T14:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 16,
+      "away": 30
+    },
+    "stats": {
+      "possession": {
+        "home": 51,
+        "away": 50
+      },
+      "territory": {
+        "home": 52,
+        "away": 46
+      },
+      "tackles": {
+        "home": 315,
+        "away": 324
+      }
+    }
+  },
+  {
+    "id": "mock-2142",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-09T16:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 44,
+      "away": 18
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 54
+      },
+      "territory": {
+        "home": 45,
+        "away": 47
+      },
+      "tackles": {
+        "home": 311,
+        "away": 336
+      }
+    }
+  },
+  {
+    "id": "mock-2143",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-08T18:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 11,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 45
+      },
+      "territory": {
+        "home": 52,
+        "away": 45
+      },
+      "tackles": {
+        "home": 316,
+        "away": 326
+      }
+    }
+  },
+  {
+    "id": "mock-2144",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-07T12:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 10,
+      "away": 20
+    },
+    "stats": {
+      "possession": {
+        "home": 52,
+        "away": 51
+      },
+      "territory": {
+        "home": 47,
+        "away": 51
+      },
+      "tackles": {
+        "home": 326,
+        "away": 317
+      }
+    }
+  },
+  {
+    "id": "mock-2145",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-07T14:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 22,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 49
+      },
+      "territory": {
+        "home": 46,
+        "away": 51
+      },
+      "tackles": {
+        "home": 300,
+        "away": 330
+      }
+    }
+  },
+  {
+    "id": "mock-2146",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-06T16:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 22,
+      "away": 22
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 45
+      },
+      "territory": {
+        "home": 54,
+        "away": 46
+      },
+      "tackles": {
+        "home": 329,
+        "away": 317
+      }
+    }
+  },
+  {
+    "id": "mock-2147",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-02T18:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 38,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 53
+      },
+      "territory": {
+        "home": 51,
+        "away": 52
+      },
+      "tackles": {
+        "home": 348,
+        "away": 344
+      }
+    }
+  },
+  {
+    "id": "mock-2148",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-01T12:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 48,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 45
+      },
+      "territory": {
+        "home": 49,
+        "away": 50
+      },
+      "tackles": {
+        "home": 347,
+        "away": 349
+      }
+    }
+  },
+  {
+    "id": "mock-2149",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-03-01T14:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 6,
+      "away": 26
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 52
+      },
+      "territory": {
+        "home": 54,
+        "away": 47
+      },
+      "tackles": {
+        "home": 314,
+        "away": 325
+      }
+    }
+  },
+  {
+    "id": "mock-2150",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-28T16:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 10,
+      "away": 11
+    },
+    "stats": {
+      "possession": {
+        "home": 50,
+        "away": 49
+      },
+      "territory": {
+        "home": 49,
+        "away": 47
+      },
+      "tackles": {
+        "home": 346,
+        "away": 329
+      }
+    }
+  },
+  {
+    "id": "mock-2151",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-28T18:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 34,
+      "away": 6
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 53
+      },
+      "territory": {
+        "home": 48,
+        "away": 50
+      },
+      "tackles": {
+        "home": 345,
+        "away": 328
+      }
+    }
+  },
+  {
+    "id": "mock-2152",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-27T12:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 42,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 53
+      },
+      "territory": {
+        "home": 53,
+        "away": 54
+      },
+      "tackles": {
+        "home": 328,
+        "away": 315
+      }
+    }
+  },
+  {
+    "id": "mock-2153",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "awayTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-23T14:00:00.000Z",
+    "venue": "Leigh Sports Village",
+    "scores": {
+      "home": 24,
+      "away": 10
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 52
+      },
+      "territory": {
+        "home": 53,
+        "away": 46
+      },
+      "tackles": {
+        "home": 337,
+        "away": 329
+      }
+    }
+  },
+  {
+    "id": "mock-2154",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "awayTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-22T16:00:00.000Z",
+    "venue": "Mend-A-Hose Jungle",
+    "scores": {
+      "home": 6,
+      "away": 46
+    },
+    "stats": {
+      "possession": {
+        "home": 54,
+        "away": 46
+      },
+      "territory": {
+        "home": 48,
+        "away": 47
+      },
+      "tackles": {
+        "home": 339,
+        "away": 329
+      }
+    }
+  },
+  {
+    "id": "mock-2155",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "awayTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-22T18:00:00.000Z",
+    "venue": "Salford Community Stadium",
+    "scores": {
+      "home": 6,
+      "away": 32
+    },
+    "stats": {
+      "possession": {
+        "home": 53,
+        "away": 51
+      },
+      "territory": {
+        "home": 45,
+        "away": 46
+      },
+      "tackles": {
+        "home": 338,
+        "away": 314
+      }
+    }
+  },
+  {
+    "id": "mock-2156",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "awayTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-21T12:00:00.000Z",
+    "venue": "Halliwell Jones Stadium",
+    "scores": {
+      "home": 18,
+      "away": 12
+    },
+    "stats": {
+      "possession": {
+        "home": 45,
+        "away": 51
+      },
+      "territory": {
+        "home": 51,
+        "away": 45
+      },
+      "tackles": {
+        "home": 337,
+        "away": 335
+      }
+    }
+  },
+  {
+    "id": "mock-2157",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "awayTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-21T14:00:00.000Z",
+    "venue": "MKM Stadium",
+    "scores": {
+      "home": 4,
+      "away": 46
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 47
+      },
+      "territory": {
+        "home": 45,
+        "away": 47
+      },
+      "tackles": {
+        "home": 340,
+        "away": 343
+      }
+    }
+  },
+  {
+    "id": "mock-2158",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "awayTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-20T16:00:00.000Z",
+    "venue": "Belle Vue",
+    "scores": {
+      "home": 12,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 49,
+        "away": 50
+      },
+      "territory": {
+        "home": 51,
+        "away": 54
+      },
+      "tackles": {
+        "home": 342,
+        "away": 316
+      }
+    }
+  },
+  {
+    "id": "mock-2159",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "6",
+      "name": "Huddersfield Giants",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/yt8cfx1599320478.png"
+    },
+    "awayTeam": {
+      "id": "4",
+      "name": "Warrington Wolves",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/6990ay1599320138.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-16T18:00:00.000Z",
+    "venue": "John Smith's Stadium",
+    "scores": {
+      "home": 12,
+      "away": 20
+    },
+    "stats": {
+      "possession": {
+        "home": 47,
+        "away": 54
+      },
+      "territory": {
+        "home": 49,
+        "away": 45
+      },
+      "tackles": {
+        "home": 300,
+        "away": 335
+      }
+    }
+  },
+  {
+    "id": "mock-2160",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "2",
+      "name": "St Helens",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/qsw4741599320017.png"
+    },
+    "awayTeam": {
+      "id": "9",
+      "name": "Salford Red Devils",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/mvx62g1599320875.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-15T12:00:00.000Z",
+    "venue": "Totally Wicked Stadium",
+    "scores": {
+      "home": 82,
+      "away": 0
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 51
+      },
+      "territory": {
+        "home": 45,
+        "away": 49
+      },
+      "tackles": {
+        "home": 319,
+        "away": 347
+      }
+    }
+  },
+  {
+    "id": "mock-2161",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "3",
+      "name": "Leeds Rhinos",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/p14u931599320349.png"
+    },
+    "awayTeam": {
+      "id": "13",
+      "name": "Wakefield Trinity",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/en323k1599320716.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-15T14:00:00.000Z",
+    "venue": "Headingley",
+    "scores": {
+      "home": 12,
+      "away": 14
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 52
+      },
+      "territory": {
+        "home": 53,
+        "away": 50
+      },
+      "tackles": {
+        "home": 309,
+        "away": 334
+      }
+    }
+  },
+  {
+    "id": "mock-2162",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "7",
+      "name": "Hull KR",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/u0ypre1599320577.png"
+    },
+    "awayTeam": {
+      "id": "11",
+      "name": "Castleford Tigers",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/8iif5k1599320790.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-14T16:00:00.000Z",
+    "venue": "Sewell Group Craven Park",
+    "scores": {
+      "home": 19,
+      "away": 18
+    },
+    "stats": {
+      "possession": {
+        "home": 46,
+        "away": 53
+      },
+      "territory": {
+        "home": 54,
+        "away": 47
+      },
+      "tackles": {
+        "home": 300,
+        "away": 317
+      }
+    }
+  },
+  {
+    "id": "mock-2163",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "5",
+      "name": "Catalans Dragons",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/19k0uq1599320256.png"
+    },
+    "awayTeam": {
+      "id": "8",
+      "name": "Hull FC",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/34tppc1599320649.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-14T18:00:00.000Z",
+    "venue": "Stade Gilbert Brutus",
+    "scores": {
+      "home": 4,
+      "away": 24
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 45
+      },
+      "territory": {
+        "home": 49,
+        "away": 49
+      },
+      "tackles": {
+        "home": 325,
+        "away": 310
+      }
+    }
+  },
+  {
+    "id": "mock-2164",
+    "competition": {
+      "id": "4415",
+      "name": "Betfred Super League"
+    },
+    "homeTeam": {
+      "id": "1",
+      "name": "Wigan Warriors",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/z328jy1600893040.png"
+    },
+    "awayTeam": {
+      "id": "10",
+      "name": "Leigh Leopards",
+      "logoUrl": "https://www.thesportsdb.com/images/media/team/badge/b5z9g31671732681.png"
+    },
+    "status": "FULL-TIME",
+    "startTime": "2025-02-13T12:00:00.000Z",
+    "venue": "The Brick Community Stadium",
+    "scores": {
+      "home": 0,
+      "away": 1
+    },
+    "stats": {
+      "possession": {
+        "home": 48,
+        "away": 50
+      },
+      "territory": {
+        "home": 48,
+        "away": 46
+      },
+      "tackles": {
+        "home": 342,
+        "away": 324
+      }
+    }
+  }
+]
