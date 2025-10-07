@@ -1,12 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useMemo } from 'react';
-import type {
-  User,
-  AttendedMatch,
-  Profile,
-  AuthUser,
-  Prediction,
-  SaveUserPredictionInput,
-} from '../types';
+import type { User, AttendedMatch, Profile, AuthUser } from '../types';
 import { checkAndAwardBadges } from '../badges';
 
 interface GoogleIdentityServices {
@@ -68,8 +61,6 @@ interface AuthContextType {
   addPhotoToMatch: (matchId: string, photoFile: File) => Promise<void>;
   addFriend: (friendId: string) => Promise<void>;
   removeFriend: (friendId: string) => Promise<void>;
-  saveUserPrediction: (input: SaveUserPredictionInput) => Promise<void>;
-  deleteUserPrediction: (matchId: string) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -85,7 +76,6 @@ const createEmptyProfile = (overrides?: Partial<User>): Profile => ({
   attendedMatches: [],
   earnedBadgeIds: [],
   friendIds: [],
-  predictions: [],
 });
 
 const mergeProfileDefaults = (profile: Partial<Profile> | null, userOverrides?: Partial<User>): Profile => {
@@ -102,7 +92,6 @@ const mergeProfileDefaults = (profile: Partial<Profile> | null, userOverrides?: 
     attendedMatches: profile.attendedMatches ?? [],
     earnedBadgeIds: profile.earnedBadgeIds ?? [],
     friendIds: profile.friendIds ?? [],
-    predictions: profile.predictions ?? [],
   };
 };
 
@@ -262,14 +251,6 @@ const readFileAsDataUrl = (file: File): Promise<string> =>
     reader.readAsDataURL(file);
   });
 
-const generatePredictionId = () => {
-  const cryptoRef = typeof globalThis !== 'undefined' ? (globalThis.crypto as Crypto | undefined) : undefined;
-  if (cryptoRef?.randomUUID) {
-    return cryptoRef.randomUUID();
-  }
-  return `prediction-${Date.now()}-${Math.random().toString(16).slice(2)}`;
-};
-
 export const useAuth = () => {
   const context = useContext(AuthContext);
   if (!context) {
@@ -427,52 +408,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     persistProfileForUser(activeProfileStorageKey, nextProfile);
   };
 
-  const saveUserPrediction = async (input: SaveUserPredictionInput) => {
-    if (!profile) return;
-
-    const timestamp = new Date().toISOString();
-    const existingIndex = profile.predictions.findIndex((prediction) => prediction.matchId === input.matchId);
-
-    let updatedPredictions: Prediction[];
-
-    if (existingIndex >= 0) {
-      const existingPrediction = profile.predictions[existingIndex];
-      updatedPredictions = [...profile.predictions];
-      updatedPredictions[existingIndex] = {
-        ...existingPrediction,
-        outcome: input.outcome,
-        confidence: input.confidence ?? existingPrediction.confidence,
-        notes: input.notes,
-        updatedAt: timestamp,
-      };
-    } else {
-      const newPrediction: Prediction = {
-        id: generatePredictionId(),
-        matchId: input.matchId,
-        outcome: input.outcome,
-        confidence: input.confidence,
-        notes: input.notes,
-        createdAt: timestamp,
-        updatedAt: timestamp,
-      };
-      updatedPredictions = [...profile.predictions, newPrediction];
-    }
-
-    const nextProfile: Profile = { ...profile, predictions: updatedPredictions };
-    setProfile(nextProfile);
-    persistProfileForUser(activeProfileStorageKey, nextProfile);
-  };
-
-  const deleteUserPrediction = async (matchId: string) => {
-    if (!profile) return;
-
-    const updatedPredictions = profile.predictions.filter((prediction) => prediction.matchId !== matchId);
-    const nextProfile: Profile = { ...profile, predictions: updatedPredictions };
-
-    setProfile(nextProfile);
-    persistProfileForUser(activeProfileStorageKey, nextProfile);
-  };
-
   const value = {
     currentUser,
     profile,
@@ -485,8 +420,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     addPhotoToMatch,
     addFriend,
     removeFriend,
-    saveUserPrediction,
-    deleteUserPrediction,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
