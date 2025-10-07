@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2021",
     "lib": ["ES2021", "DOM"],
-    "jsx": "react-jsx",
+    "jsx": "react-jsx", **<-- ADD COMMA HERE**
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "strict": true,
