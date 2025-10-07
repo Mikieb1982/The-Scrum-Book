@@ -157,7 +157,7 @@ const sanitizeLayout = (layout: TileLayoutItem[]): TileLayoutItem[] => {
     const size = isSizeAllowed ? item.size : definition.defaultSize;
     const sanitizedItem: TileLayoutItem = { id: definition.id, size };
 
-    if (!changed && (item.id !== sanitizedItem.id || item.size !== sanitizedItem.size)) {
+    if (!changed && !isSizeAllowed) {
       changed = true;
     }
 
