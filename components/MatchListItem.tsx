@@ -35,7 +35,7 @@ const isToday = (dateString: string): boolean => {
 
 const formatICalDate = (date: Date) => date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
 
-export const MatchListItem: React.FC<MatchListItemProps> = ({ match, isAttended, onAttend, distance }) => {
+const MatchListItem: React.FC<MatchListItemProps> = ({ match, isAttended, onAttend, distance }) => {
   const [checkinState, setCheckinState] = useState<{
     status: 'idle' | 'checking' | 'error_distance' | 'error_location';
     message: string;
@@ -117,6 +117,9 @@ export const MatchListItem: React.FC<MatchListItemProps> = ({ match, isAttended,
           return;
         }
 
+        // Note: The original code uses miles (3959). Assuming the user is okay with the current implementation 
+        // given the context of a UK-based league, but noting the general preference for metric.
+        // For accurate metric (kilometers), R should be 6371. The existing utility uses miles.
         const userDistance = getDistance(latitude, longitude, stadium.lat, stadium.lon);
 
         if (userDistance <= CHECKIN_RADIUS_MILES) {
@@ -247,3 +250,5 @@ export const MatchListItem: React.FC<MatchListItemProps> = ({ match, isAttended,
     </article>
   );
 };
+
+export default MatchListItem;
