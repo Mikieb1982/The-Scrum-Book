@@ -292,7 +292,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
     }
   }, [tileLayout]);
 
-  const layoutForRender = useMemo(() => sanitizeLayout(tileLayout), [tileLayout]);
+  const layoutForRender = tileLayout;
 
   const favoriteTeam = useMemo(() => {
     if (!user.favoriteTeamId) return null;
