@@ -1,22 +1,12 @@
 {
   "compilerOptions": {
-  "target": "ES2021",
-    "useDefineForClassFields": true,
-     "lib": ["ES2021", "DOM"],
+    "target": "ES2021",
+    "lib": ["ES2021", "DOM"],
+    "jsx": "react-jsx",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "jsx": "react-jsx",
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "noEmit": true,
-    "baseUrl": "./src"
-  },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
-  "exclude": ["dist", "node_modules", ".vite", "coverage"]
+    "baseUrl": ".",
+    "paths": { "*": ["./*"] }
+  }
 }
-
