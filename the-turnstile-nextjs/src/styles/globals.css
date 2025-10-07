@@ -10,9 +10,9 @@
     --clr-primary: #7f1028;
     --clr-secondary: #ffd447;
     --clr-accent: #0052cc;
-    --clr-danger: #7f1028;
-    --clr-warning: #ffd447;
-    --clr-info: #0052cc;
+    --clr-danger: var(--clr-primary);
+    --clr-warning: var(--clr-secondary);
+    --clr-info: var(--clr-accent);
     --clr-success: #00a86b;
     --clr-text-strong: #121212;
     --clr-text: #333333;
