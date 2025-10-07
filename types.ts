@@ -100,6 +100,17 @@ export interface User {
   avatarUrl?: string;
 }
 
+// Represents the authenticated user details that we persist locally. This mirrors the
+// properties populated from Google Identity Services so components can rely on a single
+// shape whether the user is online or using the offline guest profile.
+export interface AuthUser {
+  uid: string;
+  displayName?: string;
+  email?: string | null;
+  avatarUrl?: string | null;
+  isAnonymous: boolean;
+}
+
 export interface StadiumInfo {
   name: string;
   capacity: string;
