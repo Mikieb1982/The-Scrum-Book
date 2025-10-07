@@ -11,13 +11,13 @@ interface NearbyMatch extends Match {
   distance: number;
 }
 
-interface NearbyMatchesViewProps {
+interface MatchdayViewProps {
   matches: Match[];
   attendedMatchIds: string[];
   onAttend: (match: Match) => void;
 }
 
-export const NearbyMatchesView: React.FC<NearbyMatchesViewProps> = ({ matches, attendedMatchIds, onAttend }) => {
+export const MatchdayView: React.FC<MatchdayViewProps> = ({ matches, attendedMatchIds, onAttend }) => {
   const { position, isLoading, error, requestLocation } = useGeolocation();
 
   useEffect(() => {
