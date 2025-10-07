@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-roboto: "Roboto", "Inter", "Helvetica Neue", Arial, sans-serif;
+    --font-heading: "Bebas Neue", "Anton", "Oswald", "Arial Narrow", sans-serif;
+
+    --clr-primary: #7f1028;
+    --clr-secondary: #ffd447;
+    --clr-accent: #0052cc;
+    --clr-danger: var(--clr-primary);
+    --clr-warning: var(--clr-secondary);
+    --clr-info: var(--clr-accent);
+    --clr-success: #00a86b;
+    --clr-text-strong: #121212;
+    --clr-text: #333333;
+    --clr-text-subtle: #666666;
+    --clr-border: #dddddd;
+    --clr-surface: #ffffff;
+    --clr-surface-alt: #f5f5f5;
+    --gradient-1: linear-gradient(140deg, rgba(127, 16, 40, 0.12), rgba(0, 82, 204, 0.1));
+    --gradient-2: radial-gradient(circle at 20% 15%, rgba(255, 212, 71, 0.18), transparent 55%);
+    --gradient-3: radial-gradient(circle at 80% 0%, rgba(127, 16, 40, 0.14), transparent 45%);
+    color: var(--clr-text);
+    background-color: var(--clr-surface);
+    color-scheme: light;
+  }
+
+  .dark {
+    --clr-primary: #b71e3c;
+    --clr-secondary: #ffdd57;
+    --clr-accent: #0074ff;
+    --clr-danger: var(--clr-primary);
+    --clr-warning: var(--clr-secondary);
+    --clr-info: #3b82f6;
+    --clr-success: #22c55e;
+    --clr-text-strong: #ffffff;
+    --clr-text: #e0e0e0;
+    --clr-text-subtle: #a0a0a0;
+    --clr-border: #404040;
+    --clr-surface: #1a1a1a;
+    --clr-surface-alt: #2c2c2c;
+    --gradient-1: linear-gradient(140deg, rgba(183, 30, 60, 0.24), rgba(0, 116, 255, 0.18));
+    --gradient-2: radial-gradient(circle at 15% 20%, rgba(255, 221, 87, 0.22), transparent 60%);
+    --gradient-3: radial-gradient(circle at 90% 10%, rgba(183, 30, 60, 0.2), transparent 55%);
+    color: var(--clr-text);
+    background-color: var(--clr-surface);
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-roboto);
+    background-color: var(--clr-surface);
+    color: var(--clr-text);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    color: var(--clr-text-strong);
+  }
+}
