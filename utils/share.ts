@@ -20,16 +20,12 @@ export async function attemptShare(args: {
     }
   } catch (e: any) {
     if (e?.name === 'AbortError') return 'dismissed';
-    // fall through to copy
   }
-
   try {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
       await navigator.clipboard.writeText(args.url);
       return 'copied';
     }
-  } catch {
-    /* ignore */
-  }
+  } catch {}
   return 'error';
 }
