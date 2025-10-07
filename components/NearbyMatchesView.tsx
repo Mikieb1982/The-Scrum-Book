@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from 'react';
 import type { Match } from '../types';
-import { MatchListItem } from './MatchListItem';
+import MatchListItem from './MatchListItem';
 import { LoadingSpinner } from './LoadingSpinner';
 import { AlertTriangleIcon } from './Icons';
 import { useGeolocation } from '../hooks/useGeolocation';
