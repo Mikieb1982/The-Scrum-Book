@@ -2,19 +2,20 @@
 export type ShareOutcome = 'shared' | 'copied' | 'dismissed' | 'error';
 
 export const getAppShareUrl = (): string => {
-  // Prefer an explicit base for static exports; fallback to current origin
   const envBase = import.meta.env.VITE_PUBLIC_BASE_URL as string | undefined;
-  return envBase ?? (typeof window !== 'undefined' ? window.location.origin : '');
+  if (envBase) return envBase;
+  if (typeof window !== 'undefined') return window.location.origin;
+  return '';
 };
 
-export async function attemptShare(params: {
+export async function attemptShare(args: {
   title: string;
   text: string;
   url: string;
 }): Promise<ShareOutcome> {
   try {
     if (typeof navigator !== 'undefined' && 'share' in navigator) {
-      await (navigator as any).share(params);
+      await (navigator as any).share(args);
       return 'shared';
     }
   } catch (e: any) {
@@ -24,7 +25,7 @@ export async function attemptShare(params: {
 
   try {
     if (typeof navigator !== 'undefined' && navigator.clipboard) {
-      await navigator.clipboard.writeText(params.url);
+      await navigator.clipboard.writeText(args.url);
       return 'copied';
     }
   } catch {
