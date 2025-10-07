@@ -1,3 +1,4 @@
+import { ShareOutcome, getAppShareUrl, attemptShare } from '../utils/share';
 import React, { useState } from 'react';
 import type { Match } from '../types';
 import {
