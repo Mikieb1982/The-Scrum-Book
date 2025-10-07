@@ -1,4 +1,5 @@
 import React from 'react';
+import type { FC, ReactNode, SVGProps } from 'react';
 import type { View, AuthUser } from '../types';
 import {
   CalendarIcon,
@@ -17,9 +18,9 @@ interface MobileNavProps {
   currentUser: AuthUser | null;
 }
 
-const NavButton: React.FC<{
+const NavButton: FC<{
     label: string;
-    icon: React.ReactNode;
+    icon: ReactNode;
     isActive: boolean;
     onClick: () => void;
 }> = ({ label, icon, isActive, onClick }) => {
@@ -40,10 +41,10 @@ const NavButton: React.FC<{
 };
 
 
-export const MobileNav: React.FC<MobileNavProps> = ({ currentView, setView, currentUser }) => {
+export const MobileNav: FC<MobileNavProps> = ({ currentView, setView, currentUser }) => {
     const isProfileActive = ['PROFILE', 'MY_MATCHES', 'STATS', 'BADGES', 'GROUNDS'].includes(currentView);
     
-    const navItems: { view: View; label: string; icon: React.FC<React.SVGProps<SVGSVGElement>>; isActive: boolean }[] = [
+    const navItems: { view: View; label: string; icon: FC<SVGProps<SVGSVGElement>>; isActive: boolean }[] = [
         { 
             view: 'PROFILE', 
             label: currentUser ? 'Profile' : 'Login', 

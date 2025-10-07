@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import type { FC, ChangeEvent } from 'react';
 import type { Match } from '../types';
 import MatchListItem from './MatchListItem';
 import { RefreshIcon, SearchIcon } from './Icons';
@@ -10,7 +11,7 @@ interface MatchListProps {
   onRefresh: () => void;
 }
 
-export const MatchList: React.FC<MatchListProps> = ({ matches, attendedMatchIds, onAttend, onRefresh }) => {
+export const MatchList: FC<MatchListProps> = ({ matches, attendedMatchIds, onAttend, onRefresh }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const { upcomingMatches, filteredMatches } = useMemo(() => {
@@ -64,7 +65,7 @@ export const MatchList: React.FC<MatchListProps> = ({ matches, attendedMatchIds,
             type="text"
             placeholder="Filter by team name..."
             value={searchQuery}
-            onChange={event => setSearchQuery(event.target.value)}
+            onChange={(event: ChangeEvent<HTMLInputElement>) => setSearchQuery(event.target.value)}
             className="w-full rounded-md border border-border bg-surface py-2 pl-10 pr-4 text-text placeholder:text-text-subtle focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary md:w-64"
           />
         </div>

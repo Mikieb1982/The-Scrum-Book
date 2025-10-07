@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import type { FC, ChangeEvent, MouseEvent } from 'react';
 import { XMarkIcon, ArrowUpTrayIcon, UserCircleIcon } from './Icons';
 
 interface AvatarModalProps {
@@ -8,9 +9,9 @@ interface AvatarModalProps {
   currentAvatar?: string;
 }
 
-export const AvatarModal: React.FC<AvatarModalProps> = ({ isOpen, onClose, onSave, currentAvatar }) => {
+export const AvatarModal: FC<AvatarModalProps> = ({ isOpen, onClose, onSave, currentAvatar }) => {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
   
   useEffect(() => {
     if (isOpen) {
@@ -20,7 +21,7 @@ export const AvatarModal: React.FC<AvatarModalProps> = ({ isOpen, onClose, onSav
 
   if (!isOpen) return null;
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       const reader = new FileReader();
@@ -39,7 +40,10 @@ export const AvatarModal: React.FC<AvatarModalProps> = ({ isOpen, onClose, onSav
 
   return (
     <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="avatar-modal-title">
-      <div className="bg-surface rounded-xl shadow-lg w-full max-w-md max-h-[90vh] flex flex-col" onClick={e => e.stopPropagation()}>
+      <div
+        className="bg-surface rounded-xl shadow-lg w-full max-w-md max-h-[90vh] flex flex-col"
+        onClick={(event: MouseEvent<HTMLDivElement>) => event.stopPropagation()}
+      >
         <div className="flex items-center justify-between p-4 border-b border-border">
           <h2 id="avatar-modal-title" className="text-xl font-bold text-text-strong">Edit Avatar</h2>
           <button onClick={onClose} className="p-1 rounded-full text-text-subtle hover:bg-surface-alt" aria-label="Close">

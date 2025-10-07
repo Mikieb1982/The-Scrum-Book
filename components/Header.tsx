@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import type { FC, ReactNode } from 'react';
 import {
   CalendarIcon,
   InformationCircleIcon,
@@ -24,7 +25,7 @@ interface HeaderProps {
   currentUser: AuthUser | null;
 }
 
-export const Header: React.FC<HeaderProps> = ({ currentView, setView, theme, toggleTheme, currentUser }) => {
+export const Header: FC<HeaderProps> = ({ currentView, setView, theme, toggleTheme, currentUser }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -49,10 +50,10 @@ export const Header: React.FC<HeaderProps> = ({ currentView, setView, theme, tog
   }, [lastScrollY]);
 
 
-  const NavButton: React.FC<{
+  const NavButton: FC<{
     view: View;
     label: string;
-    icon: React.ReactNode;
+    icon: ReactNode;
   }> = ({ view, label, icon }) => {
     const isActive = currentView === view;
     return (

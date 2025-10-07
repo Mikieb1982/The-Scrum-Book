@@ -1,4 +1,5 @@
 import React from 'react';
+import type { FC, MouseEvent } from 'react';
 import type { AttendedMatch } from '../types';
 import { XMarkIcon } from './Icons';
 import { TeamLogo } from './TeamLogo';
@@ -9,7 +10,7 @@ interface PhotoViewerModalProps {
   attendedMatch: AttendedMatch | null;
 }
 
-export const PhotoViewerModal: React.FC<PhotoViewerModalProps> = ({ isOpen, onClose, attendedMatch }) => {
+export const PhotoViewerModal: FC<PhotoViewerModalProps> = ({ isOpen, onClose, attendedMatch }) => {
   if (!isOpen || !attendedMatch || !attendedMatch.photoUrl) return null;
 
   const { match, attendedOn, photoUrl } = attendedMatch;
@@ -21,9 +22,9 @@ export const PhotoViewerModal: React.FC<PhotoViewerModalProps> = ({ isOpen, onCl
       role="dialog" 
       aria-modal="true"
     >
-      <div 
-        className="bg-surface rounded-xl shadow-lg w-full max-w-3xl max-h-[90vh] flex flex-col" 
-        onClick={e => e.stopPropagation()}
+      <div
+        className="bg-surface rounded-xl shadow-lg w-full max-w-3xl max-h-[90vh] flex flex-col"
+        onClick={(event: MouseEvent<HTMLDivElement>) => event.stopPropagation()}
       >
         <div className="relative">
           <img src={photoUrl} alt={`Photo from ${match.homeTeam.name} vs ${match.awayTeam.name}`} className="w-full h-auto max-h-[70vh] object-contain rounded-t-xl" />

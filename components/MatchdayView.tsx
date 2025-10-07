@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
+import type { FC } from 'react';
 import type { Match } from '../types';
 import MatchListItem from './MatchListItem';
 import { LoadingSpinner } from './LoadingSpinner';
@@ -17,7 +18,7 @@ interface MatchdayViewProps {
   onAttend: (match: Match) => void;
 }
 
-export const MatchdayView: React.FC<MatchdayViewProps> = ({ matches, attendedMatchIds, onAttend }) => {
+export const MatchdayView: FC<MatchdayViewProps> = ({ matches, attendedMatchIds, onAttend }) => {
   const { position, isLoading, error, requestLocation } = useGeolocation();
 
   useEffect(() => {

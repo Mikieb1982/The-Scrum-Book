@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import type { FC, ReactNode } from 'react';
 import type { User, AttendedMatch } from '../types';
 import { TEAMS, teamIdToVenue } from '../services/mockData';
 import { TeamLogo } from './TeamLogo';
@@ -245,7 +246,7 @@ const readStoredLayout = (): TileLayoutItem[] => {
   }
 };
 
-export const ProfileView: React.FC<ProfileViewProps> = ({
+export const ProfileView: FC<ProfileViewProps> = ({
   user,
   setUser,
   setView,
@@ -397,7 +398,7 @@ export const ProfileView: React.FC<ProfileViewProps> = ({
 
   const firstName = user.name ? user.name.split(' ')[0] : 'there';
 
-  const renderers: Record<TileId, () => React.ReactNode> = {
+  const renderers: Record<TileId, () => ReactNode> = {
     hero: () => (
       <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-2xl bg-gradient-to-br from-primary/90 via-primary to-primary/80 p-6 text-white shadow-card">
         <div className="absolute -top-24 -right-24 h-56 w-56 rounded-full bg-white/10 blur-3xl" aria-hidden="true" />

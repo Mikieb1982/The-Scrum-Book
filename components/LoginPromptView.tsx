@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import type { FC } from 'react';
 import { LogoIcon } from './Icons';
 
 interface LoginPromptViewProps {
@@ -9,7 +10,7 @@ interface LoginPromptViewProps {
 const MISSING_CLIENT_ID_MESSAGE =
   'Google Sign-In requires configuration. Set VITE_GOOGLE_CLIENT_ID in your .env.local file to your OAuth web client ID.';
 
-export const LoginPromptView: React.FC<LoginPromptViewProps> = ({ onLogin, theme }) => {
+export const LoginPromptView: FC<LoginPromptViewProps> = ({ onLogin, theme }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const isGoogleConfigured = Boolean(import.meta.env.VITE_GOOGLE_CLIENT_ID);

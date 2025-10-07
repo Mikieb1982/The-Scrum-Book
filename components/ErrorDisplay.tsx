@@ -1,5 +1,5 @@
-
 import React from 'react';
+import type { FC } from 'react';
 import { AlertTriangleIcon } from './Icons';
 
 interface ErrorDisplayProps {
@@ -7,7 +7,7 @@ interface ErrorDisplayProps {
   onRetry: () => void;
 }
 
-export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ message, onRetry }) => {
+export const ErrorDisplay: FC<ErrorDisplayProps> = ({ message, onRetry }) => {
   return (
     <div className="bg-surface p-8 rounded-md text-center flex flex-col items-center shadow-card">
         <AlertTriangleIcon className="w-12 h-12 text-danger mb-4" />

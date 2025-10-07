@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import type { FC } from 'react';
 import type { LeagueStanding, Venue } from '../types';
 import { fetchLeagueTable } from '../services/apiService';
 import { LoadingSpinner } from './LoadingSpinner';
@@ -8,7 +9,7 @@ import { TeamLogo } from './TeamLogo';
 import { ALL_VENUES, TEAM_BRANDING } from '../services/mockData';
 import { getDistance } from '../utils/geolocation';
 
-const FormIndicator: React.FC<{ form: string }> = ({ form }) => {
+const FormIndicator: FC<{ form: string }> = ({ form }) => {
     return (
         <div className="flex gap-1">
             {form.split('').slice(-5).map((result, index) => {
@@ -26,7 +27,7 @@ const FormIndicator: React.FC<{ form: string }> = ({ form }) => {
     );
 };
 
-export const LeagueTableView: React.FC = () => {
+export const LeagueTableView: FC = () => {
     const [table, setTable] = useState<LeagueStanding[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -136,7 +137,7 @@ interface SortedVenue extends Venue {
     distance: number;
 }
 
-export const GroundsView: React.FC = () => {
+export const GroundsView: FC = () => {
     const [location, setLocation] = useState<LocationState>(null);
     const [sortedVenues, setSortedVenues] = useState<SortedVenue[]>([]);
     const [loading, setLoading] = useState(true);

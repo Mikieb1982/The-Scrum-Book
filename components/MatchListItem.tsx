@@ -1,5 +1,6 @@
 import { ShareOutcome, getAppShareUrl, attemptShare } from '../utils/share';
 import React, { useState } from 'react';
+import type { FC, MouseEvent } from 'react';
 import type { Match } from '../types';
 import {
   CalendarPlusIcon,
@@ -35,7 +36,7 @@ const isToday = (dateString: string): boolean => {
 
 const formatICalDate = (date: Date) => date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
 
-const MatchListItem: React.FC<MatchListItemProps> = ({ match, isAttended, onAttend, distance }) => {
+const MatchListItem: FC<MatchListItemProps> = ({ match, isAttended, onAttend, distance }) => {
   const [checkinState, setCheckinState] = useState<{
     status: 'idle' | 'checking' | 'error_distance' | 'error_location';
     message: string;
@@ -54,12 +55,12 @@ const MatchListItem: React.FC<MatchListItemProps> = ({ match, isAttended, onAtte
     setTimeout(() => setCheckinState({ status: 'idle', message: '' }), CHECKIN_RESET_DELAY);
   };
 
-  const handleMarkAsAttended = (event: React.MouseEvent) => {
+  const handleMarkAsAttended = (event: MouseEvent) => {
     event.stopPropagation();
     onAttend(match);
   };
 
-  const handleAddToCalendar = (event: React.MouseEvent) => {
+  const handleAddToCalendar = (event: MouseEvent) => {
     event.stopPropagation();
 
     const startDate = new Date(match.startTime);
@@ -93,7 +94,7 @@ const MatchListItem: React.FC<MatchListItemProps> = ({ match, isAttended, onAtte
     URL.revokeObjectURL(url);
   };
 
-  const handleCheckIn = (event: React.MouseEvent) => {
+  const handleCheckIn = (event: MouseEvent) => {
     event.stopPropagation();
     setCheckinState({ status: 'checking', message: 'Checking location...' });
 

@@ -1,5 +1,6 @@
 import { ShareOutcome, getAppShareUrl, attemptShare } from '../utils/share';
 import React, { useMemo } from 'react';
+import type { FC, ReactNode } from 'react';
 import type { AttendedMatch, User } from '../types';
 import { TEAMS } from '../services/mockData';
 import { TeamLogo } from './TeamLogo';
@@ -10,7 +11,7 @@ interface StatsViewProps {
     user: User;
 }
 
-const StatCard: React.FC<{ label: string; children: React.ReactNode; className?: string }> = ({ label, children, className }) => (
+const StatCard: FC<{ label: string; children: ReactNode; className?: string }> = ({ label, children, className }) => (
     <div className={`bg-surface p-4 rounded-xl shadow-card flex flex-col justify-center items-center text-center ${className}`}>
         <div className="text-3xl md:text-4xl font-extrabold text-primary [font-variant-numeric:tabular-nums]">
             {children}
@@ -19,7 +20,7 @@ const StatCard: React.FC<{ label: string; children: React.ReactNode; className?:
     </div>
 );
 
-export const StatsView: React.FC<StatsViewProps> = ({ attendedMatches, user }) => {
+export const StatsView: FC<StatsViewProps> = ({ attendedMatches, user }) => {
 
     const stats = useMemo(() => {
         if (attendedMatches.length === 0) {

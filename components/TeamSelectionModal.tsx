@@ -1,4 +1,5 @@
 import React from 'react';
+import type { FC, MouseEvent } from 'react';
 import { TEAMS, TEAM_BRANDING } from '../services/mockData';
 import { TeamLogo } from './TeamLogo';
 import { XMarkIcon } from './Icons';
@@ -12,12 +13,15 @@ interface TeamSelectionModalProps {
 
 const allTeams = Object.values(TEAMS);
 
-export const TeamSelectionModal: React.FC<TeamSelectionModalProps> = ({ isOpen, onClose, onSelectTeam, currentTeamId }) => {
+export const TeamSelectionModal: FC<TeamSelectionModalProps> = ({ isOpen, onClose, onSelectTeam, currentTeamId }) => {
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="team-select-title">
-      <div className="bg-surface rounded-xl shadow-lg w-full max-w-2xl max-h-[90vh] flex flex-col" onClick={e => e.stopPropagation()}>
+      <div
+        className="bg-surface rounded-xl shadow-lg w-full max-w-2xl max-h-[90vh] flex flex-col"
+        onClick={(event: MouseEvent<HTMLDivElement>) => event.stopPropagation()}
+      >
         <div className="flex items-center justify-between p-4 border-b border-border">
           <h2 id="team-select-title" className="text-xl font-bold text-text-strong">Select Favorite Team</h2>
           <button onClick={onClose} className="p-1 rounded-full text-text-subtle hover:bg-surface-alt" aria-label="Close">

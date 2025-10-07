@@ -1,8 +1,9 @@
 import React from 'react';
+import type { FC } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { UsersIcon, ArrowRightOnRectangleIcon } from './Icons';
 
-export const CommunityView: React.FC = () => {
+export const CommunityView: FC = () => {
   const { currentUser } = useAuth();
 
   return (

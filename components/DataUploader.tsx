@@ -1,8 +1,9 @@
 import React from 'react';
+import type { FC } from 'react';
 import { mockMatches, mockLeagueTable } from '../services/mockData';
 import { ServerIcon, AlertTriangleIcon } from './Icons';
 
-export const DataUploader: React.FC = () => {
+export const DataUploader: FC = () => {
   return (
     <div className="bg-surface p-6 md:p-8 rounded-md shadow-card max-w-2xl mx-auto">
       <div className="flex items-center gap-4 mb-6 border-b border-border pb-4">

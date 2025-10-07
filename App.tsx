@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+import type { FC } from 'react';
 import { Header } from './components/Header';
 import { MobileNav } from './components/MobileNav';
 import { MatchList } from './components/MatchList';
@@ -24,7 +25,7 @@ import { LoginPromptView } from './components/LoginPromptView';
 import { LogoIcon } from './components/Icons';
 import { syncThemeWithFavouriteTeam } from './utils/themeUtils';
 
-const App: React.FC = () => {
+const App: FC = () => {
   const [view, setView] = useState<View>('PROFILE');
   const [theme, toggleTheme] = useTheme();
   const themeMode = theme === 'dark' ? 'dark' : 'light';

@@ -1,4 +1,5 @@
 import React from 'react';
+import type { FC } from 'react';
 import { TEAM_BRANDING } from '../services/mockData';
 
 interface TeamLogoProps {
@@ -19,7 +20,7 @@ const getInitials = (name: string): string => {
         .toUpperCase();
 };
 
-export const TeamLogo: React.FC<TeamLogoProps> = ({ teamId, teamName, size = 'medium', className }) => {
+export const TeamLogo: FC<TeamLogoProps> = ({ teamId, teamName, size = 'medium', className }) => {
     const sizeClasses = {
         small: 'w-6 h-6',
         medium: 'w-10 h-10 md:w-12 md:h-12',

@@ -1,4 +1,5 @@
 import React from 'react';
+import type { FC, MouseEvent } from 'react';
 import type { TeamInfo } from '../types';
 import { XMarkIcon } from './Icons';
 
@@ -7,7 +8,7 @@ interface StadiumModalProps {
   onClose: () => void;
 }
 
-export const StadiumModal: React.FC<StadiumModalProps> = ({ team, onClose }) => {
+export const StadiumModal: FC<StadiumModalProps> = ({ team, onClose }) => {
   if (!team) return null;
 
   return (
@@ -18,9 +19,9 @@ export const StadiumModal: React.FC<StadiumModalProps> = ({ team, onClose }) => 
         aria-modal="true" 
         aria-labelledby="stadium-modal-title"
     >
-      <div 
-        className="bg-surface rounded-xl shadow-lg w-full max-w-lg border border-border relative" 
-        onClick={e => e.stopPropagation()}
+      <div
+        className="bg-surface rounded-xl shadow-lg w-full max-w-lg border border-border relative"
+        onClick={(event: MouseEvent<HTMLDivElement>) => event.stopPropagation()}
       >
         <button 
             onClick={onClose} 

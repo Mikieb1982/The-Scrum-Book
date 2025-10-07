@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import type { FC } from 'react';
 import { teamsData } from '../services/stadiumData';
 import type { TeamInfo } from '../types';
 import { StadiumModal } from './StadiumModal';
@@ -6,7 +7,7 @@ import { TrophyIcon } from './Icons';
 import { TeamLogo } from './TeamLogo';
 import { TEAMS, TEAM_BRANDING } from '../services/mockData';
 
-export const TeamStatsView: React.FC = () => {
+export const TeamStatsView: FC = () => {
     const [selectedTeam, setSelectedTeam] = useState<TeamInfo | null>(null);
 
     return (

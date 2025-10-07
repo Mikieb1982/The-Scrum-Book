@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import type { FC, ChangeEvent, MouseEvent } from 'react';
 import type { AttendedMatch } from '../types';
 import { XMarkIcon, ArrowUpTrayIcon, CameraIcon, MiniSpinnerIcon } from './Icons';
 
@@ -10,10 +11,10 @@ interface PhotoUploadModalProps {
   match: AttendedMatch | null;
 }
 
-export const PhotoUploadModal: React.FC<PhotoUploadModalProps> = ({ isOpen, onClose, onUpload, isUploading, match }) => {
+export const PhotoUploadModal: FC<PhotoUploadModalProps> = ({ isOpen, onClose, onUpload, isUploading, match }) => {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
   
   useEffect(() => {
     if (isOpen && match) {
@@ -24,7 +25,7 @@ export const PhotoUploadModal: React.FC<PhotoUploadModalProps> = ({ isOpen, onCl
 
   if (!isOpen || !match) return null;
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
       setSelectedFile(file);
@@ -44,7 +45,10 @@ export const PhotoUploadModal: React.FC<PhotoUploadModalProps> = ({ isOpen, onCl
 
   return (
     <div className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="photo-modal-title">
-      <div className="bg-surface rounded-xl shadow-lg w-full max-w-md max-h-[90vh] flex flex-col" onClick={e => e.stopPropagation()}>
+      <div
+        className="bg-surface rounded-xl shadow-lg w-full max-w-md max-h-[90vh] flex flex-col"
+        onClick={(event: MouseEvent<HTMLDivElement>) => event.stopPropagation()}
+      >
         <div className="flex items-center justify-between p-4 border-b border-border">
           <h2 id="photo-modal-title" className="text-xl font-bold text-text-strong">
             {match.photoUrl ? 'Change' : 'Add'} Photo

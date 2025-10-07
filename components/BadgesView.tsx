@@ -1,5 +1,5 @@
-
 import React from 'react';
+import type { FC } from 'react';
 import type { Badge } from '../types';
 import { TrophyIcon } from './Icons';
 
@@ -8,7 +8,7 @@ interface BadgesViewProps {
     earnedBadgeIds: string[];
 }
 
-const BadgeCard: React.FC<{ badge: Badge; isEarned: boolean }> = ({ badge, isEarned }) => {
+const BadgeCard: FC<{ badge: Badge; isEarned: boolean }> = ({ badge, isEarned }) => {
     const Icon = badge.icon;
     return (
         <div 
@@ -32,7 +32,7 @@ const BadgeCard: React.FC<{ badge: Badge; isEarned: boolean }> = ({ badge, isEar
     );
 };
 
-export const BadgesView: React.FC<BadgesViewProps> = ({ allBadges, earnedBadgeIds }) => {
+export const BadgesView: FC<BadgesViewProps> = ({ allBadges, earnedBadgeIds }) => {
     
     const earnedCount = earnedBadgeIds.length;
     const totalCount = allBadges.length;

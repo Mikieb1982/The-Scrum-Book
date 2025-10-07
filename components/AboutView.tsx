@@ -1,4 +1,5 @@
 import React from 'react';
+import type { FC, ComponentType, SVGProps } from 'react';
 import {
   LogoIcon,
   SparklesIcon,
@@ -13,7 +14,7 @@ import {
 interface HighlightCard {
   title: string;
   description: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
   accent: string;
   footer?: string;
 }
@@ -21,14 +22,14 @@ interface HighlightCard {
 interface FeatureColumn {
   title:string;
   items: string[];
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
 }
 
 interface FeatureCard {
   title: string;
   summary: string;
   focus: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
 }
 
 const highlightCards: HighlightCard[] = [
@@ -111,7 +112,7 @@ interface AboutViewProps {
   theme: 'light' | 'dark';
 }
 
-export const AboutView: React.FC<AboutViewProps> = ({ theme }) => {
+export const AboutView: FC<AboutViewProps> = ({ theme }) => {
   return (
     <div className="space-y-12">
       <section className="relative overflow-hidden rounded-3xl border border-white/60 bg-surface shadow-card dark:border-white/10">

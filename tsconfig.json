@@ -7,7 +7,15 @@
     "moduleResolution": "Bundler",
     "strict": true,
     "baseUrl": ".",
-    "paths": { "*": ["./*"] },
+    "paths": {
+      "react": ["vendor/mini-react/index"],
+      "react/jsx-runtime": ["vendor/mini-react/jsx-runtime"],
+      "react/jsx-dev-runtime": ["vendor/mini-react/jsx-dev-runtime"],
+      "react/*": ["vendor/mini-react/*"],
+      "react-dom/client": ["vendor/mini-react-dom/client"],
+      "*": ["./*"]
+    },
+    "types": ["node"],
     "noEmit": true
   }
 }

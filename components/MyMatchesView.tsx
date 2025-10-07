@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import type { FC, ChangeEvent, ReactNode } from 'react';
 import type { AttendedMatch } from '../types';
 import { TrashIcon, CalendarIcon, LocationMarkerIcon, RefreshIcon, CameraIcon } from './Icons';
 import { TeamLogo } from './TeamLogo';
@@ -11,7 +12,7 @@ interface MyMatchesViewProps {
     onRemove: (matchId: string) => void;
 }
 
-export const MyMatchesView: React.FC<MyMatchesViewProps> = ({ attendedMatches, onRemove }) => {
+export const MyMatchesView: FC<MyMatchesViewProps> = ({ attendedMatches, onRemove }) => {
     const [yearFilter, setYearFilter] = useState('all');
     const [competitionFilter, setCompetitionFilter] = useState('all');
     const [sortBy, setSortBy] = useState('attendedDesc');
@@ -86,7 +87,7 @@ export const MyMatchesView: React.FC<MyMatchesViewProps> = ({ attendedMatches, o
         );
     }
 
-    const SelectControl: React.FC<{ label: string, value: string, onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void, children: React.ReactNode }> = ({ label, value, onChange, children }) => (
+    const SelectControl: FC<{ label: string; value: string; onChange: (e: ChangeEvent<HTMLSelectElement>) => void; children: ReactNode }> = ({ label, value, onChange, children }) => (
         <div className="flex flex-col">
             <label className="text-xs font-semibold text-text-subtle mb-1">{label}</label>
             <select
