@@ -1,254 +1,126 @@
-import { ShareOutcome, getAppShareUrl, attemptShare } from '../utils/share';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import type { Match } from '../types';
-import {
-  CalendarPlusIcon,
-  CheckCircleIcon,
-  ClockIcon,
-  LocationMarkerIcon,
-  MiniSpinnerIcon,
-  PlusCircleIcon,
-} from './Icons';
-import { TeamLogo } from './TeamLogo';
-import { ALL_VENUES } from '../services/mockData';
-import { getDistance } from '../utils/geolocation';
+import MatchListItem from './MatchListItem';
+// import { formatDateUK } from '../utils/date'; // Original file uses formatDate, removed for clarity
 
-interface MatchListItemProps {
-  match: Match;
-  isAttended: boolean;
+interface MatchdayViewProps {
+  matches: Match[];
+  attendedMatchIds: string[];
   onAttend: (match: Match) => void;
-  distance?: number;
 }
 
-const CHECKIN_RADIUS_MILES = 1.0;
-const CHECKIN_RESET_DELAY = 3000;
-
-const isToday = (dateString: string): boolean => {
-  const today = new Date();
-  const someDate = new Date(dateString);
-  return (
-    someDate.getDate() === today.getDate() &&
-    someDate.getMonth() === today.getMonth() &&
-    someDate.getFullYear() === today.getFullYear()
-  );
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString(undefined, {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
 };
 
-const formatICalDate = (date: Date) => date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+type ActiveTab = 'fixtures' | 'results';
 
-const MatchListItem: React.FC<MatchListItemProps> = ({ match, isAttended, onAttend, distance }) => {
-  const [checkinState, setCheckinState] = useState<{
-    status: 'idle' | 'checking' | 'error_distance' | 'error_location';
-    message: string;
-  }>({ status: 'idle', message: '' });
+type TabButtonProps = {
+  tab: ActiveTab;
+  label: string;
+  isActive: boolean;
+  onClick: (tab: ActiveTab) => void;
+};
 
-  const isFullTime = match.status === 'FULL-TIME';
-  const isScheduled = match.status === 'SCHEDULED';
-  const matchIsToday = isToday(match.startTime);
-  const matchTime = new Date(match.startTime).toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  });
+const TabButton: React.FC<TabButtonProps> = ({ tab, label, isActive, onClick }) => (
+  <button
+    onClick={() => onClick(tab)}
+    className={`rounded-lg px-4 py-2 text-sm font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 ${
+      isActive ? 'bg-primary text-white shadow-sm' : 'bg-transparent text-text-subtle hover:bg-surface hover:text-text'
+    }`}
+  >
+    {label}
+  </button>
+);
 
-  const resetCheckinState = () => {
-    setTimeout(() => setCheckinState({ status: 'idle', message: '' }), CHECKIN_RESET_DELAY);
-  };
+export const MatchdayView: React.FC<MatchdayViewProps> = ({ matches, attendedMatchIds, onAttend }) => {
+  const [activeTab, setActiveTab] = useState<ActiveTab>('results');
 
-  const handleMarkAsAttended = (event: React.MouseEvent) => {
-    event.stopPropagation();
-    onAttend(match);
-  };
+  const { fixtures, results } = useMemo(() => {
+    const fixturesList = matches
+      .filter(match => match.status === 'SCHEDULED')
+      .sort((a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime());
 
-  const handleAddToCalendar = (event: React.MouseEvent) => {
-    event.stopPropagation();
+    const resultsList = matches
+      .filter(match => match.status === 'FULL-TIME')
+      .sort((a, b) => new Date(b.startTime).getTime() - new Date(a.startTime).getTime());
 
-    const startDate = new Date(match.startTime);
-    const endDate = new Date(startDate.getTime() + 105 * 60 * 1000);
+    return { fixtures: fixturesList, results: resultsList };
+  }, [matches]);
 
-    const icsContent = [
-      'BEGIN:VCALENDAR',
-      'VERSION:2.0',
-      'BEGIN:VEVENT',
-      `UID:${match.id}@thescrumbook.com`,
-      `DTSTAMP:${formatICalDate(new Date())}`,
-      `DTSTART:${formatICalDate(startDate)}`,
-      `DTEND:${formatICalDate(endDate)}`,
-      `SUMMARY:${match.homeTeam.name} vs ${match.awayTeam.name}`,
-      `DESCRIPTION:Betfred Super League: ${match.homeTeam.name} vs ${match.awayTeam.name}`,
-      `LOCATION:${match.venue}`,
-      'END:VEVENT',
-      'END:VCALENDAR',
-    ].join('\r\n');
+  const matchesToDisplay = activeTab === 'fixtures' ? fixtures : results;
 
-    const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
+  const groupedMatches = useMemo(() => {
+    return matchesToDisplay.reduce<Record<string, Match[]>>((accumulator, match) => {
+      const dateKey = new Date(match.startTime).toDateString();
+      if (!accumulator[dateKey]) {
+        accumulator[dateKey] = [];
+      }
+      accumulator[dateKey].push(match);
+      return accumulator;
+    }, {});
+  }, [matchesToDisplay]);
 
-    const link = document.createElement('a');
-    link.href = url;
-    const fileName = `${match.homeTeam.name.replace(/\s/g, '_')}-vs-${match.awayTeam.name.replace(/\s/g, '_')}.ics`;
-    link.setAttribute('download', fileName);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
-  };
+  const sortedDateKeys = Object.keys(groupedMatches);
 
-  const handleCheckIn = (event: React.MouseEvent) => {
-    event.stopPropagation();
-    setCheckinState({ status: 'checking', message: 'Checking location...' });
-
-    const handleLocationError = (message: string, status: 'error_distance' | 'error_location') => {
-      setCheckinState({ status, message });
-      resetCheckinState();
-    };
-
-    if (!navigator.geolocation) {
-      handleLocationError('Location not supported', 'error_location');
-      return;
-    }
-
-    navigator.geolocation.getCurrentPosition(
-      position => {
-        const { latitude, longitude } = position.coords;
-        const stadium = ALL_VENUES.find(venue => venue.name === match.venue);
-
-        if (!stadium) {
-          handleLocationError('Stadium location unknown', 'error_location');
-          return;
-        }
-
-        // Note: The original code uses miles (3959). Assuming the user is okay with the current implementation 
-        // given the context of a UK-based league, but noting the general preference for metric.
-        // For accurate metric (kilometers), R should be 6371. The existing utility uses miles.
-        const userDistance = getDistance(latitude, longitude, stadium.lat, stadium.lon);
-
-        if (userDistance <= CHECKIN_RADIUS_MILES) {
-          onAttend(match);
-          setCheckinState({ status: 'idle', message: '' });
-        } else {
-          handleLocationError(`Too far away (${userDistance.toFixed(1)} mi)`, 'error_distance');
-        }
-      },
-      error => {
-        console.error('Geolocation error:', error);
-        handleLocationError('Location unavailable', 'error_location');
-      },
-      { timeout: 10000, enableHighAccuracy: true },
-    );
-  };
-
-  const renderAttendButton = () => {
-    if (isAttended) {
+  const renderMatchList = () => {
+    if (sortedDateKeys.length === 0) {
       return (
-        <button className="flex cursor-default items-center gap-1.5 rounded-md bg-secondary px-3 py-1.5 text-xs font-semibold text-white" disabled>
-          <CheckCircleIcon className="h-4 w-4" />
-          <span>Attended</span>
-        </button>
-      );
-    }
-
-    if (matchIsToday && !isFullTime) {
-      const isChecking = checkinState.status === 'checking';
-      const isError = checkinState.status.startsWith('error');
-
-      let buttonClass = 'bg-info text-white hover:bg-info/90';
-      if (isError) buttonClass = 'bg-danger text-white';
-      if (isChecking) buttonClass = 'bg-info/80 text-white cursor-wait';
-
-      return (
-        <button
-          onClick={handleCheckIn}
-          disabled={isChecking}
-          className={`flex w-32 items-center justify-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 focus:ring-offset-surface-alt ${buttonClass}`}
-        >
-          {isChecking && <MiniSpinnerIcon className="h-4 w-4" />}
-          {!isChecking && <LocationMarkerIcon className="h-4 w-4" />}
-          <span>{checkinState.status !== 'idle' ? checkinState.message : 'Check In'}</span>
-        </button>
+        <div className="rounded-md bg-surface py-20 text-center">
+          <h2 className="text-2xl font-bold text-text-strong">
+            {activeTab === 'fixtures' ? 'No Upcoming Fixtures' : 'No Past Results'}
+          </h2>
+          <p className="mt-2 text-text-subtle">
+            {activeTab === 'fixtures'
+              ? 'Check back later for more scheduled matches.'
+              : 'There are no results to display for this season.'}
+          </p>
+        </div>
       );
     }
 
     return (
-      <button
-        onClick={handleMarkAsAttended}
-        className="flex items-center gap-1.5 rounded-md border border-secondary px-3 py-1.5 text-xs font-semibold text-secondary transition-colors duration-200 hover:bg-secondary/10 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 focus:ring-offset-surface-alt"
-      >
-        <PlusCircleIcon className="h-4 w-4" />
-        <span className="hidden sm:inline">I was there</span>
-        <span className="sm:hidden">Attend</span>
-      </button>
+      <div className="space-y-8">
+        {sortedDateKeys.map(dateKey => (
+          <div key={dateKey}>
+            <h2 className="mb-4 border-b-2 border-primary pb-2 text-xl font-bold text-text-strong">
+              {formatDate(dateKey)}
+            </h2>
+            <div className="space-y-4">
+              {groupedMatches[dateKey].map(match => (
+                <MatchListItem
+                  key={match.id}
+                  match={match}
+                  isAttended={attendedMatchIds.includes(match.id)}
+                  onAttend={onAttend}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     );
   };
 
   return (
-    <article className="overflow-hidden rounded-md bg-surface shadow-card transition-shadow duration-300 hover:shadow-lg">
-      <div className="grid items-center gap-3 p-4 [grid-template-columns:1fr_auto_1fr]">
-        <div className="flex min-w-0 items-center gap-3">
-          <TeamLogo teamId={match.homeTeam?.id} teamName={match.homeTeam?.name ?? 'Home'} size="medium" />
-          <span className="truncate text-sm font-semibold text-text-strong md:text-base">{match.homeTeam?.name ?? 'Home Team'}</span>
-        </div>
-
-        <div className="text-center">
-          <div className="flex min-h-[40px] items-center justify-center gap-2 text-4xl font-extrabold text-text-strong [font-variant-numeric:tabular-nums]">
-            {isFullTime ? (
-              <>
-                <span>{match.scores.home}</span>
-                <span>-</span>
-                <span>{match.scores.away}</span>
-              </>
-            ) : (
-              <span className="text-2xl font-semibold tracking-wider text-text-subtle">VS</span>
-            )}
-          </div>
-          <div
-            className={`mt-1 inline-flex items-center gap-2 rounded-md px-2 py-1 text-xs font-semibold ${
-              isFullTime ? 'bg-accent text-text-strong' : 'bg-surface-alt text-text-subtle'
-            }`}
-          >
-            {isFullTime ? 'FT' : matchTime}
-          </div>
-        </div>
-
-        <div className="flex min-w-0 items-center justify-end gap-3">
-          <span className="truncate text-right text-sm font-semibold text-text-strong md:text-base">{match.awayTeam?.name ?? 'Away Team'}</span>
-          <TeamLogo teamId={match.awayTeam?.id} teamName={match.awayTeam?.name ?? 'Away'} size="medium" />
-        </div>
+    <div className="space-y-6">
+      <div className="border-b border-border pb-4">
+        <h1 className="text-3xl font-bold text-text-strong">Fixtures &amp; Results</h1>
+        <p className="mt-1 text-text-subtle">View upcoming matches or past results for the season.</p>
       </div>
 
-      <div className="flex flex-col gap-3 border-t border-border bg-surface-alt px-4 py-3 text-sm text-text-subtle sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-          <div className="flex items-center gap-1.5">
-            <LocationMarkerIcon className="h-4 w-4" />
-            <span>{match.venue}</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <ClockIcon className="h-4 w-4" />
-            <span>{new Date(match.startTime).toLocaleDateString()}</span>
-          </div>
-          {distance !== undefined && (
-            <div className="font-semibold text-primary">
-              <span>{distance.toFixed(1)} mi away</span>
-            </div>
-          )}
-        </div>
-
-        <div className="flex items-center gap-2 self-end sm:self-auto">
-          {isScheduled && (
-            <button
-              onClick={handleAddToCalendar}
-              className="flex items-center gap-1.5 rounded-md border border-info px-3 py-1.5 text-xs font-semibold text-info transition-colors duration-200 hover:bg-info/10 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 focus:ring-offset-surface-alt"
-              aria-label="Add match to calendar"
-            >
-              <CalendarPlusIcon className="h-4 w-4" />
-              <span className="hidden sm:inline">Add to Calendar</span>
-              <span className="sm:hidden">Calendar</span>
-            </button>
-          )}
-          {renderAttendButton()}
-        </div>
+      <div className="flex w-fit items-center gap-2 rounded-xl bg-surface-alt p-1">
+        <TabButton tab="results" label="Results" isActive={activeTab === 'results'} onClick={setActiveTab} />
+        <TabButton tab="fixtures" label="Fixtures" isActive={activeTab === 'fixtures'} onClick={setActiveTab} />
       </div>
-    </article>
+
+      {renderMatchList()}
+    </div>
   );
 };
-
-export default MatchListItem;
