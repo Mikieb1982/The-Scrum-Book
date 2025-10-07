@@ -14,11 +14,11 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run build  # should run: next build && next export
+      - run: npm run build     # builds to dist/
       - uses: actions/upload-artifact@v4
         with:
           name: web-dist
-          path: out
+          path: dist
 
   deploy:
     needs: build
@@ -27,10 +27,10 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: web-dist
-          path: out
+          path: dist
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_THE_SCRUM_BOOK }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          projectId: "${{ secrets.FIREBASE_PROJECT_ID }}"
           channelId: live
-          projectId: "the-scrum-book"
