@@ -19,14 +19,6 @@ export type View =
   | 'ADMIN'
   | 'COMMUNITY';
 
-export interface AuthUser {
-  uid: string;
-  displayName?: string;
-  email?: string | null;
-  avatarUrl?: string | null;
-  isAnonymous: boolean;
-}
-
 export interface Team {
   id: string;
   name: string;

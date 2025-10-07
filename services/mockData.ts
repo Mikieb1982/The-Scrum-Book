@@ -99,24 +99,6 @@ export const ALL_VENUES: Venue[] = [
   { name: VENUES.stJamesPark, team: 'Neutral', lat: 54.9756, lon: -1.6218 }
 ];
 
-export const VENUE_LOCATIONS: Record<string, { x: number; y: number; name: string }> = {
-  [VENUES.dw]: { x: 245, y: 300, name: VENUES.dw },
-  [VENUES.totallyWicked]: { x: 235, y: 310, name: VENUES.totallyWicked },
-  [VENUES.headingley]: { x: 280, y: 285, name: VENUES.headingley },
-  [VENUES.halliwellJones]: { x: 250, y: 320, name: VENUES.halliwellJones },
-  [VENUES.gilbertBrutus]: { x: 450, y: 750, name: VENUES.gilbertBrutus },
-  [VENUES.johnSmiths]: { x: 275, y: 295, name: VENUES.johnSmiths },
-  [VENUES.cravenPark]: { x: 335, y: 280, name: VENUES.cravenPark },
-  [VENUES.mkm]: { x: 330, y: 285, name: VENUES.mkm },
-  [VENUES.salfordCommunity]: { x: 255, y: 310, name: VENUES.salfordCommunity },
-  [VENUES.leighSportsVillage]: { x: 240, y: 305, name: VENUES.leighSportsVillage },
-  [VENUES.mendAHose]: { x: 290, y: 290, name: VENUES.mendAHose },
-  [VENUES.cherryRed]: { x: 320, y: 640, name: VENUES.cherryRed },
-  [VENUES.belleVue]: { x: 285, y: 292, name: VENUES.belleVue },
-  [VENUES.oldTrafford]: { x: 260, y: 315, name: VENUES.oldTrafford },
-  [VENUES.stJamesPark]: { x: 280, y: 150, name: VENUES.stJamesPark }
-};
-
 // ---------- Match factory helpers ----------
 const createMatch = (
   id: number,
