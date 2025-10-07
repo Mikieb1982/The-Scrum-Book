@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import type { Match } from '../types';
-import { MatchListItem } from './MatchListItem';
+import MatchListItem from './MatchListItem';
 import { RefreshIcon, SearchIcon } from './Icons';
 
 interface MatchListProps {
