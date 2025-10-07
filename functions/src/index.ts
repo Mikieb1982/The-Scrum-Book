@@ -9,7 +9,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/health", (_req, res) => res.json({ ok: true }));
-app.get("/matches", (_req, res) => res.json({ matches: [] }));
+const apiRouter = express.Router();
+
+apiRouter.get("/health", (_req, res) => res.json({ ok: true }));
+apiRouter.get("/matches", (_req, res) => res.json({ matches: [] }));
+
+app.use("/api", apiRouter);
+app.use(apiRouter);
 
 export const api = functions.https.onRequest(app);
