@@ -32,8 +32,8 @@
     --clr-primary: #b71e3c;
     --clr-secondary: #ffdd57;
     --clr-accent: #0074ff;
-    --clr-danger: #b71e3c;
-    --clr-warning: #ffdd57;
+    --clr-danger: var(--clr-primary);
+    --clr-warning: var(--clr-secondary);
     --clr-info: #3b82f6;
     --clr-success: #22c55e;
     --clr-text-strong: #ffffff;
